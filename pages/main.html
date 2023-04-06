@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Parkpin Otopark Rezervasyon</title>
+        <link rel="stylesheet" href="../css/header.css"/>
+        <link rel="stylesheet" href="../css/main.css"/>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"/>
+        <!-- FONT ICIN -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"
+            rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/ec613c6134.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+  
+    <!--================ Loader Başlangıç =================-->
+      <div id="loader"></div>
+    <!--================ Loader Bitiş =================-->
+
+    <!--================ Demo Başlangıç =================-->
+
+  <div id="demo-div">
+    <ul>
+      <li>
+        <h3>Demo Sürüm - V0.4</h3>
+      </li>
+      <li>
+        <span>
+          <a
+              href="https://discord.gg/xtBA3vsj"
+              target="_blank"
+              style="color: white; text-decoration: none;">
+              <i class="fa-brands fa-discord"></i>
+          </a>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+    <!--================ Demo Bitiş =================-->
+
+    <!--================ Header Başlangıç =================-->
+    
+    <header>
+      <div class="header">
+        <div id="mainLogo" class="mainLogo">
+        <div id="mainLogoDot"><img src="../img/mainLogo.png" alt="Logo"></div>
+        <h6><a href="main.html" style="text-decoration: none; color: black; cursor: default;">parkpin</a></h6></div>
+      <input class="menu-btn" type="checkbox" id="menu-btn"/>
+      <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+      <ul class="menu">
+        <li><a href="hakkımızda.html">Hakkımızda</a></li>
+        <li><a href="incelemeler.html">İncelemeler</a></li>
+        <li><a href="giris-yap.html">Giriş Yap</a></li>
+      </ul>  
+    </div>
+    </header>
+
+    <!--================ Header Bitiş =================-->
+
+    <main>
+    
+    <!--================ Main Alanı Başlangıç =================-->
+
+      <section>
+        <div class="main-container">
+    
+      <!--================ Sol Kısım Başlangıç =================-->
+
+        <div class="main-container-left">
+          <div class="main-container-left-in">
+            <h1 class="main-container-left-texts">Arabanı güvenli bir otoparka mı park etmek istiyorsun ?</h1>    
+              <br><br>
+                <h3 class="main-container-left-texts" id="main-container-left-texts-right">Parking Early-Access Sürümü ile 
+                deneme aşamasında göz atmak için konum girerek başla.</h3>
+                  <div class="searchbox">
+                    <div id="container-blank"></div>
+                      <div id="searchbox-div">
+                        <h3>Şehir ve kurum seçerek başlayabilirsin.</h3>
+                      </div>
+                    <form class="form">
+                  <div id="selectCity">
+                <label for="city">Nerede?</label>
+              <select id="city">
+            <option value="izmir">İzmir</option>
+          <option value="ankara">Ankara</option>
+        <option value="istanbul">İstanbul</option>
+          </option>
+            </select>
+              </div>
+                <div id="selectService">
+                  <label for="selectService">Hizmet?</label>
+                    <select id="city">
+                      <option value="izmir">Optimum AVM</option>
+                        <option value="ankara">İstinye Zort</option>
+                      <option value="istanbul">Abdulrezzak Kapalı Otopark</option>
+                    </option>
+                  </select>
+                </div>
+              <div id="submitButton">
+            <button>Ara <i class="fa-solid fa-magnifying-glass-location"></i></button>
+          </div>
+        </form>
+          </div>
+            </div>
+          </div>
+
+      <!--================ Sol Kısım Bitiş =================-->
+
+      <!--================ Sağ Kısım Başlangıç =================-->
+
+          <div class="main-container-right">
+            <div class="main-container-right-in">
+              <img src="../img/carvector.png" alt="Parked Car" width="600" height="650">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--================ Sağ Kısım Bitiş =================-->
+
+      <!--================ Main Alanı Bitiş =================-->
+
+
+
+      <!--======== Boşluk Alanı ==========-->
+      <div id="blank-container"></div>
+      <!--======== Boşluk Alanı ==========-->
+
+
+
+      <!--================ Map ve Search Alanı Başlangıç =================-->
+
+      <section>
+      <div id="map-container">
+
+          <!--================ Mapbox Alanı Başlangıç =================-->
+
+        <div class="mapbox-container">
+          <div class="mapbox">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21029.116503367735!2d27.12056530026665!3d38.41843719092947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd8e2fece48eb%3A0xafa58b890c33632a!2zS29uYWsvxLB6bWly!5e0!3m2!1str!2str!4v1678699387432!5m2!1str!2str" width="100%" height="100%" style="border:0; border-radius: 30px; filter: invert(100%); " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+          <!--================ Mapbox Alanı Bitiş=================-->
+
+          <!--================ Search Alanı Başlangıç=================-->
+ 
+      <div class="mapinfo-container">
+          <div class="mapsearch-container">
+            <div class="mapsearch">
+              <div id="mapsearchh3">
+                <h3> Otopark Lokasyonları</h3>
+              <h6> Sana en yakın otoparkı ara!</h6>
+            </div>
+          <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="  Otopark Ara.." name="search">
+            <button type="submit">Ara <i class="fa-solid fa-square-parking"></i></button>
+              </form>
+                </div>
+              </div>
+            </div>
+          <div class="inforeview-container">
+        <div class="review">
+          <div class="review-h3">
+            <h3>Atatürk 10.No Otopark</h3>
+              </div>
+                <div class="review-feedbacks">
+                  <div class="addedBy">
+                <h3><i class="fa-solid fa-at"></i> Added By: username</h3>
+              </div>
+            <div class="comments-container">
+          <div class="first-comment">
+        <div class="comment-author"><h3>Yelp</h3></div>
+          <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <h3>5.0</h3>
+              </div>
+            </div>
+          <div class="secondary-comment">
+        <div class="comment-author"><h3>Google</h3></div>
+          <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <h3>4.0</h3>
+              </div>
+            </div>
+          </div>
+        <div class="photo-feedbacks">
+          <div class="photo-h3"><h3>Fotoğraflar</h3></div>
+            <div class="photo-section">
+                  <div class="photos"><img src="../img/otopark/images1.jpeg" alt="Otopark Fotoğrafı"></div>
+                  <div class="photos"><img src="../img/otopark/iamges2.jpg" alt="Otopark Fotoğrafı"></div>
+                  <div class="photos"><img src="../img/otopark/images3.jpg" alt="Otopark Fotoğrafı"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    
+          <!--================ Search Alanı Bitiş=================-->
+
+      <!--================ Map ve Search Alanı Bitiş =================-->
+
+    </main>
+      <script src="../js/main.js"></script>
+      <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+      crossorigin="anonymous"></script>
+</body>
+</html>

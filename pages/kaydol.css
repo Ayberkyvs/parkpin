@@ -1,0 +1,260 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #dceffd;
+  font-family: 100% "Inter", sans-serif;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+.mainContainer {
+  border: 1px solid red;
+  position: relative;
+  top: 45px;
+  display: flex;
+  width: 100%;
+  height: 900px;
+}
+.mainContainer .brandContainer {
+  width: 20%;
+  height: 100%;
+  background-color: #FFDD63;
+  background-image: url("../img/signupbg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer .brandContainer .brand {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+.mainContainer .brandContainer .brand div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  height: auto;
+  margin-left: 60px;
+}
+.mainContainer .brandContainer .brand div img {
+  width: 35px;
+  height: 35px;
+}
+.mainContainer .brandContainer .brand div h6 {
+  margin-top: 6px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.mainContainer .brandContainer .brandContainerBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+}
+.mainContainer .brandContainer .brandContainerBody .sloganContainer {
+  display: flex;
+  position: relative;
+  top: 110px;
+  width: 70%;
+  height: auto;
+}
+.mainContainer .brandContainer .brandContainerBody .sloganContainer h5 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: left;
+}
+.mainContainer .brandContainer .brandContainerBody .moreoptionsContainer {
+  display: flex;
+  width: 70%;
+  height: 20px;
+  margin-bottom: 50px;
+}
+.mainContainer .brandContainer .brandContainerBody .moreoptionsContainer h6 a {
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+.mainContainer .signupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  background-color: #dceffd;
+}
+.mainContainer .signupContainer .signupContainer-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+  height: 80%;
+}
+.mainContainer .someTextsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 25%;
+}
+.mainContainer .someTextsContainer .someTexts {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+.mainContainer .someTextsContainer h5 {
+  font-size: 18px !important;
+}
+.mainContainer .someTextsContainer h6 {
+  font-size: 16px !important;
+  color: rgb(100, 100, 100);
+  font-weight: normal;
+}
+.mainContainer .registerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 500px;
+}
+.mainContainer .registerForm .nameinfoContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.mainContainer .registerForm .nameinfoContainer div {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer .registerForm .contactinfoContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.mainContainer .registerForm .contactinfoContainer div {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer .registerForm .personalinfoContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.mainContainer .registerForm .personalinfoContainer div {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer .registerForm .passwordContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.mainContainer .registerForm .passwordContainer div {
+  position: relative;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer .registerForm .passwordContainer input:valid ~ .faeye {
+  display: block;
+}
+.mainContainer .registerForm .passwordContainer .faeye {
+  position: absolute;
+  right: 15px;
+  top: 51%;
+  font-size: 20px;
+  color: #FFDD63;
+  cursor: pointer;
+  display: none;
+}
+.mainContainer .registerForm .passwordContainer .faeye i.hide-btn:before {
+  content: "fa-sharp fa-solid fa-eye-slash";
+}
+.mainContainer .registerForm .labelClass {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.mainContainer .registerForm .inputClass {
+  height: 50px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+}
+.mainContainer .registerForm .checkboxContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.mainContainer .registerForm .checkboxContainer div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+  height: auto;
+  margin-top: 10px;
+}
+.mainContainer .registerForm .checkboxContainer div .checkboxClass {
+  display: flex;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.mainContainer .registerForm .checkboxContainer div .checkboxlabelClass {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+.mainContainer .registerForm .submitbuttonContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+}
+.mainContainer .registerForm .submitbuttonContainer input {
+  width: 23%;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  background-color: #5A54F2;
+}
+.mainContainer .registerForm .submitbuttonContainer input:hover {
+  background-color: #FFDD63;
+  color: black;
+}/*# sourceMappingURL=kaydol.css.map */

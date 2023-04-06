@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Aramıza Hoşgeldin</title>
+        <link rel="stylesheet" href="../css/header.css"/>
+        <link rel="stylesheet" href="kaydol.css"/>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <!--<link rel="stylesheet" href="../css/main.css"/> -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"/>
+        <!-- FONT ICIN -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"
+            rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/ec613c6134.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+  
+    <!--================ Loader Başlangıç =================-->
+      <div id="loder"></div>
+    <!--================ Loader Bitiş =================-->
+
+    <!--================ Demo Başlangıç =================-->
+
+  <div id="demo-div">
+    <ul>
+      <li>
+        <h3>Demo Sürüm - V0.4</h3>
+      </li>
+      <li>
+        <span>
+          <a
+              href="https://discord.gg/xtBA3vsj"
+              target="_blank"
+              style="color: white; text-decoration: none;">
+              <i class="fa-brands fa-discord"></i>
+          </a>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+    <!--================ Demo Bitiş =================-->
+<main>
+<div class="mainContainer">
+<div class="brandContainer">
+  <div class="brand">
+    <div>
+    <img src="../img/parkpinDot.png" alt="Parkpin Logosu">
+    <h6><a style="text-decoration: none; color: black; cursor: default;">Parkpin Akıllı Otopark</a></h6>
+    </div>
+  </div>
+  <div class="brandContainerBody">
+  <div class="sloganContainer">
+    <h5>Hesabınızı oluşturmaktan birkaç <br>tık uzaktasınız! <i class="fa-solid fa-heart"></i></h5>
+  </div>
+  <div class="moreoptionsContainer">
+    <h6> <i class="fa-solid fa-arrow-left"></i> <a href="giris-yap.html">Giriş Yap</a></h6>
+  </div>
+</div>
+</div>
+<div class="signupContainer">
+  <div class="signupContainer-in">
+    <div class="someTextsContainer">
+      <h3 class="someTexts">Kayıt Ol !</h3>
+      <br><br>
+      <h5 class="someTexts">Bu bilgilere ihtiyacımız var!</h5>
+      <h6 class="someTexts">Seni ve arabanı sistemimizde bulundurmak için araç ve kimlik bilgilerinize ihtiyaç duyuyoruz.</h6>
+    </div>
+      <form class="registerForm" action="/signup.php" method="post" autocomplete="off">
+        <div class="nameinfoContainer">
+          <div>
+          <label class="labelClass" for="name">Ad</label>
+          <input class="inputClass" type="text" id="name" name="name" placeholder=" " autofocus minlength="3" required>
+          </div>
+          <div>
+          <label class="labelClass" for="lname">Soyad</label>
+          <input class="inputClass" type="text" id="lname" name="lname" placeholder=" " minlength="3" required>
+          </div>
+        </div>
+        <div class="contactinfoContainer">
+          <div>
+            <label class="labelClass" for="phone">Telefon Numarası</label>
+            <input class="inputClass" type="tel" id="phone" name="phone" placeholder="054140504050" minlength="11" pattern="\+90\s[1-9][0-9]{2}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
+            </div>
+            <div>
+            <label class="labelClass" for="email">E-posta</label>
+            <input class="inputClass" type="email" id="email" name="email" placeholder=" " required>
+            </div>
+        </div>
+        <div class="personalinfoContainer">
+          <div>
+            <label class="labelClass" for="tckimlikno">TC Numarası</label>
+            <input class="inputClass" type="text" id="tckimlikno" name="tckimlikno" onblur="tckimlikkontorolu(this);" maxlength="11" required>
+            </div>
+            <div>
+            <label class="labelClass" for="city">Şehir</label>
+            <input class="inputClass" type="city" id="city" name="city" placeholder="" list="cities" required>
+            <datalist id="cities">
+              <option value="0">------</option>
+              <option value="1">Adana</option>
+              <option value="2">Adıyaman</option>
+              <option value="3">Afyonkarahisar</option>
+              <option value="4">Ağrı</option>
+              <option value="5">Amasya</option>
+              <option value="6">Ankara</option>
+              <option value="7">Antalya</option>
+              <option value="8">Artvin</option>
+              <option value="9">Aydın</option>
+              <option value="10">Balıkesir</option>
+              <option value="11">Bilecik</option>
+              <option value="12">Bingöl</option>
+              <option value="13">Bitlis</option>
+              <option value="14">Bolu</option>
+              <option value="15">Burdur</option>
+              <option value="16">Bursa</option>
+              <option value="17">Çanakkale</option>
+              <option value="18">Çankırı</option>
+              <option value="19">Çorum</option>
+              <option value="20">Denizli</option>
+              <option value="21">Diyarbakır</option>
+              <option value="22">Edirne</option>
+              <option value="23">Elazığ</option>
+              <option value="24">Erzincan</option>
+              <option value="25">Erzurum</option>
+              <option value="26">Eskişehir</option>
+              <option value="27">Gaziantep</option>
+              <option value="28">Giresun</option>
+              <option value="29">Gümüşhane</option>
+              <option value="30">Hakkâri</option>
+              <option value="31">Hatay</option>
+              <option value="32">Isparta</option>
+              <option value="33">Mersin</option>
+              <option value="34">İstanbul</option>
+              <option value="35">İzmir</option>
+              <option value="36">Kars</option>
+              <option value="37">Kastamonu</option>
+              <option value="38">Kayseri</option>
+              <option value="39">Kırklareli</option>
+              <option value="40">Kırşehir</option>
+              <option value="41">Kocaeli</option>
+              <option value="42">Konya</option>
+              <option value="43">Kütahya</option>
+              <option value="44">Malatya</option>
+              <option value="45">Manisa</option>
+              <option value="46">Kahramanmaraş</option>
+              <option value="47">Mardin</option>
+              <option value="48">Muğla</option>
+              <option value="49">Muş</option>
+              <option value="50">Nevşehir</option>
+              <option value="51">Niğde</option>
+              <option value="52">Ordu</option>
+              <option value="53">Rize</option>
+              <option value="54">Sakarya</option>
+              <option value="55">Samsun</option>
+              <option value="56">Siirt</option>
+              <option value="57">Sinop</option>
+              <option value="58">Sivas</option>
+              <option value="59">Tekirdağ</option>
+              <option value="60">Tokat</option>
+              <option value="61">Trabzon</option>
+              <option value="62">Tunceli</option>
+              <option value="63">Şanlıurfa</option>
+              <option value="64">Uşak</option>
+              <option value="65">Van</option>
+              <option value="66">Yozgat</option>
+              <option value="67">Zonguldak</option>
+              <option value="68">Aksaray</option>
+              <option value="69">Bayburt</option>
+              <option value="70">Karaman</option>
+              <option value="71">Kırıkkale</option>
+              <option value="72">Batman</option>
+              <option value="73">Şırnak</option>
+              <option value="74">Bartın</option>
+              <option value="75">Ardahan</option>
+              <option value="76">Iğdır</option>
+              <option value="77">Yalova</option>
+              <option value="78">Karabük</option>
+              <option value="79">Kilis</option>
+              <option value="80">Osmaniye</option>
+              <option value="81">Düzce</option>
+              </datalist>
+            </div>
+        </div>
+        <div class="passwordContainer">
+          <div>
+            <label class="labelClass" for="password">Şifre</label>
+            <input class="inputClass" type="password" id="password" name="password" placeholder=" " required>
+            <span class="faeye"><i class="fa-sharp fa-solid fa-eye"></i></span>
+            </div>
+            <div>
+            <label class="labelClass" for="password">Şifreyi Tekrar Giriniz</label>
+            <input class="inputClass" type="password" id="confirm_password" name="password" placeholder=" " required>
+            </div>
+        </div>
+        <div class="checkboxContainer">
+          <div>
+            <input class="checkboxClass" type="checkbox" id="fname" name="fname" placeholder=" " required>
+            <label class="checkboxlabelClass"  for="fname">Kayıt olarak <a href="#">kullanım şartları</a>nı okuduğumu kabul ediyorum.</label>
+          </div>
+          <div>
+            <input class="checkboxClass" type="checkbox" id="fname" name="fname" placeholder=" " required>
+            <label class="checkboxlabelClass" for="fname"><a href="#">Gizlilik</a> ve <a href="#">kullanıcı kayıt şartları</a> sözleşmesini kabul ediyorum.</label>
+          </div>
+        </div>
+        <div class="submitbuttonContainer">
+          <input type="submit" value="Kayıt Ol"></input>
+        </div>
+      </form>
+  </div>
+</div>
+</div>
+<script>
+  var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Şifreler Eşleşmiyor!");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
+function tckimlikkontorolu(tcno) {
+	var tckontrol,toplam; tckontrol = tcno; tcno = tcno.value; toplam = Number(tcno.substring(0,1)) + Number(tcno.substring(1,2)) +
+	Number(tcno.substring(2,3)) + Number(tcno.substring(3,4)) +
+	Number(tcno.substring(4,5)) + Number(tcno.substring(5,6)) +
+	Number(tcno.substring(6,7)) + Number(tcno.substring(7,8)) +
+	Number(tcno.substring(8,9)) + Number(tcno.substring(9,10));
+	strtoplam = String(toplam); onunbirlerbas = strtoplam.substring(strtoplam.length,strtoplam.length-1);
+
+	if(onunbirlerbas == tcno.substring(10,11)) {
+    tckimlikno.setCustomValidity("");
+    tckimlikno.style.border = "";
+	} else{
+		tckimlikno.setCustomValidity("TC Kimlik Doğrulanamadı.");
+    tckimlikno.style.border = "1px solid red";
+	}
+}
+const phoneInput = document.getElementById('phone');
+
+function formatPhoneNumber(e) {
+  let input = e.target.value;
+
+  // Tüm olası karakterleri kaldırıyoruz
+  input = input.replace(/[^\d]/g, '');
+
+  // Maksimum 11 karakter kabul edilecektir
+  input = input.substring(0, 11);
+
+  // Numarayı belirli bir formata dönüştürüyoruz
+  let formattedInput = input.replace(/(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/, "+90 $2 $3 $4 $5");
+
+  // Formatlanmış numarayı input alanına yazıyoruz
+  e.target.value = formattedInput;
+}
+
+phoneInput.addEventListener('input', formatPhoneNumber);
+
+const cityInput = document.getElementById('city');
+
+cityInput.addEventListener('change', function() {
+  const selectedCity = this.value;
+  const citiesList = document.getElementById('cities').options;
+  let isValid = false;
+
+  // Check if selected city is in the list of cities
+  for (let i = 0; i < citiesList.length; i++) {
+    if (citiesList[i].value === selectedCity) {
+      isValid = true;
+      break;
+    }
+  }
+
+  // Set custom validity message if selected city is not valid
+  if (!isValid) {
+    cityInput.setCustomValidity('Lütfen listeden şehrinizi seçiniz.');
+  } else {
+    cityInput.setCustomValidity('');
+  }
+});
+
+var passField = document.querySelector("#password");
+var btn = document.querySelector(".faeye");
+      btn.onclick = function(){
+        if(passField.type === "password"){
+          passField.type = "text";
+          btn.classList.add("hide-btn");
+        }else{
+          passField.type = "password";
+          btn.classList.remove("hide-btn");
+        }
+      };
+</script>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+<script src="../js/main.js"></script>
+<script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+    crossorigin="anonymous"></script>
+</body>
+</html>
