@@ -1,8 +1,8 @@
 body {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   background-color: #dceffd;
   font-family: 100% "Inter", sans-serif;
   font-weight: bold;
@@ -11,6 +11,7 @@ body {
 }
 
 .mainContainer {
+  flex-direction: row;
   position: relative;
   top: 45px;
   display: flex;
@@ -128,7 +129,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  height: 500px;
+  height: auto;
 }
 .mainContainer .registerForm .nameinfoContainer {
   display: flex;
@@ -256,4 +257,99 @@ body {
 .mainContainer .registerForm .submitbuttonContainer input:hover {
   background-color: #FFDD63;
   color: black;
-}/*# sourceMappingURL=kaydol.css.map */
+}
+
+@media screen and (max-width: 799px) {
+  .mainContainer {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .mainContainer .brandContainer {
+    width: 100%;
+    height: 30%;
+    flex-direction: columns;
+    background-image: none;
+  }
+  .mainContainer .brandContainer .brand {
+    width: 100%;
+    height: 10%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .mainContainer .brandContainer .brand div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+  }
+  .mainContainer .brandContainer .brandContainerBody {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  .mainContainer .brandContainer .brandContainerBody .sloganContainer {
+    position: relative;
+    top: 0px;
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .mainContainer .brandContainer .brandContainerBody .sloganContainer h5 {
+    font-size: 20px;
+  }
+  .mainContainer .brandContainer .brandContainerBody .moreoptionsContainer {
+    width: 80%;
+    height: 20px;
+    margin-bottom: 20px;
+  }
+  .mainContainer .brandContainer .brandContainerBody .moreoptionsContainer h6 a {
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .signupContainer {
+    border: 1px solid red;
+    width: 100% !important;
+  }
+  .signupContainer .signupContainer-in {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+  }
+  .checkboxContainer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .checkboxContainer div {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100% !important;
+    height: auto;
+    margin-top: 10px;
+  }
+  .checkboxContainer div .checkboxClass {
+    width: 10% !important;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  .checkboxContainer div .checkboxlabelClass {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    width: 90% !important;
+  }
+}
+/*# sourceMappingURL=giris-yap.css.map *//*# sourceMappingURL=kaydol.css.map */

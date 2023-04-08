@@ -550,6 +550,7 @@ option
     .main-container
     {
         top: 102px;
+        width: 100%;
         background-position-y: 0px;
     }
     .main-container
@@ -581,7 +582,7 @@ option
     }
     .main-container-right-in > img 
     {
-        width: 450px;
+        width: 100%;
         height: 500px;
     }
     .main-container-left-texts
