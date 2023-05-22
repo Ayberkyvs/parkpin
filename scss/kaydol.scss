@@ -1,14 +1,5 @@
     @charset "UTF-8";
-    $primary-color: #FFDD63;
-    $secondary-color: #e2e2e2;
-    $container-color: #020039;
-    $background-color: #dceffd;
-    $button-color: #5A54F2;
-    $font-stack: 'Inter', sans-serif;
-    $font-color: white;
-    $small: 600px;
-    $medium: 799px;
-    $big: 1400px;
+    @import '_variables.scss';
     body {
     display: flex;
     flex-direction: column;
@@ -177,6 +168,20 @@
                     width: 48%;
                     display: flex;
                     flex-direction: column;
+                }
+                .profilepic-container{
+                    height: 100%;
+                    width: 48%;
+                    display: flex;
+                    justify-content: center;
+                    input{
+                        background-color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items:center;
+                        padding-top: 10px;
+                        padding-left: 30%;
+                    }
                 }
             }
             .passwordContainer{

@@ -170,6 +170,20 @@ body {
   display: flex;
   flex-direction: column;
 }
+.mainContainer .registerForm .personalinfoContainer .profilepic-container {
+  height: 100%;
+  width: 48%;
+  display: flex;
+  justify-content: center;
+}
+.mainContainer .registerForm .personalinfoContainer .profilepic-container input {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 30%;
+}
 .mainContainer .registerForm .passwordContainer {
   display: flex;
   width: 100%;
@@ -350,4 +364,4 @@ body {
     width: 90% !important;
   }
 }
-/*# sourceMappingURL=giris-yap.css.map *//*# sourceMappingURL=kaydol.css.map */
+/*# sourceMappingURL=kaydol.css.map */

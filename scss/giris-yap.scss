@@ -1,14 +1,4 @@
-$primary-color: #FFDD63;
-$secondary-color: #e2e2e2;
-$container-color: #020039;
-$button-color: #5A54F2;
-$font-stack: 'Inter', sans-serif;
-$font-color: white;
-$small: 600px;
-$medium: 799px;
-$big: 1400px;
-$facebook: #1877f2;
-@import "variables.scss";
+@import "_variables.scss";
 body {
     display: flex;
     flex-direction: column;
