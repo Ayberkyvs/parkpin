@@ -1,0 +1,876 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+body {
+  background-color: rgb(242, 242, 242) !important;
+}
+
+.main-container {
+  display: flex;
+  position: relative;
+  top: 125px;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgb(242, 242, 242);
+  margin-bottom: 200px;
+}
+.main-container .sidebar {
+  display: flex;
+  background-color: rgb(242, 242, 242);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+}
+.main-container .sidebar .sidebar-col1 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+}
+.main-container .sidebar .sidebar-col1 a {
+  color: black;
+  font-size: 12px;
+}
+.main-container .sidebar .sidebar-col1 a:hover {
+  color: blue;
+}
+.main-container .sidebar .sidebar-col1 a:focus {
+  color: blue;
+}
+.main-container .sidebar .sidebar-col1 span {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.main-container .sidebar .sidebar-col2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.main-container .sidebar .sidebar-col2 h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.main-container .sidebar .sidebar-col2 .sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  list-style: none;
+}
+.main-container .sidebar .sidebar-col2 .sidebar-menu li {
+  display: flex;
+  text-align: left;
+  padding: 10px;
+  margin-left: -30px;
+  width: 187px;
+  height: 50px;
+  align-items: center;
+}
+.main-container .sidebar .sidebar-col2 .sidebar-menu li i {
+  margin-right: 10px;
+}
+.main-container .sidebar .sidebar-col2 .sidebar-menu li a {
+  color: black;
+  text-decoration: none;
+}
+.main-container .sidebar .sidebar-col2 .sidebar-menu li:hover {
+  background-color: rgba(89, 84, 242, 0.0980392157);
+  color: #5A54F2;
+}
+.main-container .sidebar .sidebar-col2 .sidebar-menu li:hover a {
+  color: #5A54F2;
+}
+.main-container .account-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: transparent;
+  width: 85%;
+  height: auto;
+}
+.main-container .account-container .account-inner-container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.main-container .account-container .account-inner-container .account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+.main-container .account-container .account-inner-container .account .account-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.main-container .account-container .account-inner-container .account .account-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.main-container .account-container .account-inner-container .account h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 25px;
+  line-height: 50px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.089);
+}
+.main-container .account-container .account-inner-container .personal-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 100px;
+  height: auto;
+}
+.main-container .account-container .account-inner-container .personal-info-container h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.main-container .account-container .account-inner-container .personal-info-container .inner-personal-info-container {
+  display: flex;
+  flex-direction: row;
+}
+.main-container .account-container .account-inner-container .personal-info-container .inner-personal-info-container .inner-personal-info-container-text {
+  width: 25%;
+  height: 100%;
+}
+.main-container .account-container .account-inner-container .personal-info-container .inner-personal-info-container .personal-info {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 100%;
+}
+.main-container .account-container .account-inner-container .personal-info-container .inner-personal-info-container .personal-info label {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.main-container .account-container .account-inner-container .personal-info-container .inner-personal-info-container .personal-info input {
+  border: 1px solid black;
+  height: 40px;
+  background-color: rgba(211, 211, 211, 0.122);
+}
+.main-container .account-container .account-inner-container .personal-info-container .inner-personal-info-container .personal-info input::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+}
+.main-container .account-container .account-inner-container .personal-info-container .inner-personal-info-container .personal-info input::placeholder {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+}
+.main-container .account-container .account-inner-container .personal-info-container .inner-personal-info-container .personal-info .nameinfoContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: auto;
+}
+.main-container .account-container .account-inner-container .personal-info-container .inner-personal-info-container .personal-info .nameinfoContainer div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+.main-container .account-container .account-inner-container .cars-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-bottom: 100px;
+}
+.main-container .account-container .account-inner-container .cars-info-container h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.main-container .account-container .account-inner-container .cars-info-container .inner-cars-info-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.089);
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info label {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .inputClass {
+  border: 1px solid black;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: rgba(211, 211, 211, 0.122);
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .inputClass::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .inputClass::placeholder {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer div {
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  margin-right: 50px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer textarea {
+  border: 1px solid black;
+  height: 100%;
+  background-color: rgba(211, 211, 211, 0.122);
+  margin-bottom: 30px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer textarea::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer textarea::placeholder {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer .checkboxClass {
+  height: 40px;
+  width: 40px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer .col3 {
+  width: auto;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer .col3 div {
+  width: auto;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer .col3 .col3-mg1 {
+  display: flex;
+  flex-direction: row;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer .col3 .col3-mg1 div {
+  margin-right: 20px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer .col3 .col3-mg2 {
+  margin-top: 10px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer .col3 .addedClass {
+  border: 1px solid black;
+  height: 40px;
+  width: 100px;
+  background-color: rgba(211, 211, 211, 0.122);
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer .col3 .addedClass::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer .col3 .addedClass::placeholder {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .manage-car {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .manage-car .deletecar {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  background-color: darkred;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.main-container .account-container .account-inner-container .cars-info-container .manage-car .deletecar:hover {
+  animation: shake 0.3s ease-in-out infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
+}
+.main-container .account-container .account-inner-container .cars-info-container .addCars {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
+.main-container .account-container .account-inner-container .cars-info-container .addCars button {
+  width: 100px;
+  height: 30px;
+}
+
+.account-profile-mobile {
+  display: none !important;
+}
+
+.account-profile {
+  display: flex;
+  position: relative;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 120px;
+  height: 60px;
+}
+.account-profile .profile {
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.account-profile .profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 799px) {
+  .account-profile {
+    width: 100%;
+  }
+  .profile {
+    width: 100% !important;
+    display: none !important;
+  }
+  .account-profile-mobile {
+    display: flex !important;
+  }
+}
+/* MENU AMK MENU ANASINI SİKTİĞİM MENYSY */
+.menu > li > a {
+  color: rgb(0, 0, 0);
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.header .mainLogo {
+  float: left;
+  display: block;
+}
+
+.menu {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  overflow: hidden;
+  background-color: #FFDD63;
+}
+
+.menu a {
+  display: block;
+  padding: 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #ccb04f;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.header .menu-icon {
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+  background: black;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before {
+  background: black;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+  background: black;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (min-width: 800px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  .header {
+    display: flex;
+  }
+  #mainLogo {
+    margin-left: 70px;
+  }
+  .menu {
+    margin-right: 70px;
+  }
+}
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+  height: 50px;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: #f44336;
+  height: 50px;
+  color: white;
+}
+
+/* Add padding and center-align text to the container */
+.deletecar-container {
+  padding: 16px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+    width: 100%;
+  }
+}
+#demo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  height: 25px;
+  color: white;
+  z-index: 3;
+}
+
+#demo-div > ul {
+  position: relative;
+  width: 100%;
+  height: 100% !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#demo-div > ul > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  height: 100%;
+  margin: 1px;
+  padding: 5px;
+}
+
+#demo-div > ul > li > h3 {
+  margin: 0px;
+  font-size: 9px;
+  font-family: "Inter", sans-serif;
+}
+
+#demo-div > ul > li > span {
+  font-size: 9px;
+}
+
+@media screen and (max-width: 799px) {
+  #demo-div > ul > li > h3 {
+    font-size: 7px;
+  }
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFDD63;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #dceffd;
+}
+
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #FFDD63 url("../../img/loader/loading.gif") no-repeat center;
+  z-index: 999;
+  overflow: visible;
+}
+
+.header {
+  width: 100%;
+  height: 100px !important;
+  background-color: #FFDD63;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 25px;
+  z-index: 3;
+}
+
+#mainLogo {
+  display: flex;
+  position: relative;
+  top: 5px;
+  left: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#mainLogoDot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#mainLogoDot > img {
+  width: 100%;
+  height: 92%;
+  cursor: pointer;
+}
+
+#mainLogo > h6 {
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  color: black;
+  line-height: 40px;
+  vertical-align: top;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 799px) {
+  .header {
+    height: 60px !important;
+  }
+  #mainLogoDot {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  #mainLogo > h6 {
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    color: black;
+    line-height: 40px;
+    vertical-align: top;
+    margin-left: 3px;
+  }
+}
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.footer-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("../../img/pages/home/wave2.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 15;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 14;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 15;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 14;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #dceffd;
+  font-family: 100% "Inter", sans-serif;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}/*# sourceMappingURL=hesabim.css.map */

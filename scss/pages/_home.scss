@@ -191,7 +191,7 @@ option
     width: 100%;
     height: 1000px;
     display: flex;
-    background-image: url("../img/tersback.png");
+    background-image: url("../../img/pages/home/revbg.png");
     background-position: center;
     background-size: cover;
     background-position-y: 0%;
@@ -199,280 +199,19 @@ option
 }
 .mapbox-container
 {
-
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 800px;
 }
 .mapbox
 {
     margin-top: 100px;
     border-radius: 30px;
-    width: 70%;
+    width: 85%;
     height: 75%;
     background-color: black;
-}
-.mapinfo-container
-{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
-}
-.mapsearch-container
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    height: 40%;
-}
-.mapsearch
-{
-    background-color: white;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    height: 50%;
-    border-radius: 30px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-#mapsearchh3
-{
-    width: 90%;
-    height: 60px;
-}
-#mapsearchh3 > h3
-{
-    color: black;
-    font-family: 'Inter';
-    font-size: 22px;
-    font-weight: bold;
-}
-#mapsearchh3 > h6
-{
-    color: black;
-    font-family: 'Inter';
-    font-size: 16px;
-}
-.search-container
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 70px;
-}
-.search-container > form
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-.search-container > form > input
-{
-    width: 60%;
-    height: 70%;
-    border-radius: 10px;
-    border: 1px solid black;
-    box-sizing: border-box;
-}
-.search-container > form > button
-{
-    margin-left: 40px;
-    width: 30%;
-    height: 70%;
-    border-radius: 10px;
-    background-color: #5a54f2;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    font-family: 'Inter';
-    font-weight: bold;
-}
-.inforeview-container
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 60%;
-    background-color: transparent;
-}
-.review
-{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
-    width: 90%;
-    height: 80%;
-    border-radius: 30px;
-}
-.review-h3
-{
-    border-radius: 30px 30px 0px 0px;
-    width: 100%;
-    height: 10%;
-    background-color: lightgray;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
-.review-h3 > h3 
-{
-    font-size: 23px;
-    font-family: $font-stack;
-    font-weight: bold;
-}
-.review-feedbacks
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    height: 90%;
-    border-radius: 0px 0px 30px 30px;
-}
-.addedBy
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 10%;
-}
-.addedBy > h3 
-{
-    font-size: 18px;
-    font-family: $font-stack;
-    font-weight: bold;
-    text-align: center;
-    color: black;
-}
-.comments-container
-{
-    width: 100%;
-    height: 30%;
-}
-.first-comment
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height: 30px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-}
-.comment-author
-{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 50%;
-}
-.comment-author > h3
-{
-    font-size: 18px;
-    font-family:  $font-stack;
-    font-weight: bold;
-    color: black;
-}
-.checked
-{
-    color: orange;
-}
-.stars
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 16px;
-    flex-direction: row;
-    width: 50%;
-}
-.stars > h3 
-{
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    color: black;
-    font-size: 16px;
-    text-align: center;
-}
-.secondary-comment
-{
-    display: flex;
-    flex-direction: row;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-}
-.photo-feedbacks
-{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 60%;
-    border-radius: 0px 0px 30px 30px;
-}
-.photo-h3
-{
-    display: flex;
-    width: 100%;
-    height: 15%;
-    justify-content: flex-start;
-    text-align: center;
-    border-bottom: 2px black;
-    align-items: center;
-}
-.photo-h3 > h3 
-{
-    font-size: 20px;
-    margin-left: 20px;
-    text-align: center;
-    color: black;
-    font-family: $font-stack;
-    font-weight: bold;
-}
-.photo-section
-{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 85%;
-    border-radius: 0px 0px 30px 30px;
-}
-.photos
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 33.3%;
-    height: 100%;
-}
-.photos > img 
-{
-    width: 90%;
-    height: 90%;
-    border-radius: 30px;
 }
 @media screen and (max-width: 1400px) {
     .main-container
@@ -502,11 +241,12 @@ option
     #map-container
     {
         flex-direction: column;
-        height: 1500px;
+        height: auto;
     }
     .mapbox-container
     {
         width: 100%;
+        margin-bottom: 100px;
     }
     .mapbox
     {
@@ -516,27 +256,7 @@ option
     {
         width: 100%;
     }
-    .mapsearch
-    {
-        width: 80%;
-        height: 90%;
-        margin-bottom: 0px;
-    }
-    .mapsearch-container
-    {
-        justify-content: center;
-        height: 25%;
-    }
-    .inforeview-container
-    {
-        width: 90%;
-        height: 75%;
-    }
-    .review
-    {
-        height: 90%;
-    }
-  }
+}
 
 @media screen and (max-width: 799px) {
     .main-container
@@ -581,6 +301,7 @@ option
     .main-container-right-in > img 
     {
         width: 100%;
+        transform: scale(0.8);
         height: auto;
     }
     .main-container-left-texts

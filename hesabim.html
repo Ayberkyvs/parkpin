@@ -1,0 +1,239 @@
+<!--Kullanıcılar Bu Sayfaya Giriş Yapmadan URL üzerinden girmeye çalışırsa otomatik olarak giris-yap.html' yönlendirilir-->
+<!doctype html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Parkpin Otopark Rezervasyon</title>
+        <link rel="stylesheet" href="scss/hesabim.css"/>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!-- FONT ICIN -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"
+            rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/ec613c6134.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+  
+    <!--================ Loader Başlangıç =================-->
+      <div id="loder"></div>
+    <!--================ Loader Bitiş =================-->
+
+    <!--================ Demo Başlangıç =================-->
+
+  <div id="demo-div">
+    <ul>
+      <li>
+        <h3>Demo Sürüm - V0.4</h3>
+      </li>
+      <li>
+        <span>
+          <a
+              href="https://discord.gg/xtBA3vsj"
+              target="_blank"
+              style="color: white; text-decoration: none;">
+              <i class="fa-brands fa-discord"></i>
+          </a>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+    <!--================ Demo Bitiş =================-->
+
+    <!--================ Header Başlangıç =================-->
+    
+    <header>
+      <div class="header">
+        <div id="mainLogo" class="mainLogo">
+        <div id="mainLogoDot"><img src="img/logo/mainLogo.png" alt="Logo"></div>
+        <h6><a href="main.html" style="text-decoration: none; color: black; cursor: default;">parkpin</a></h6></div>
+      <input class="menu-btn" type="checkbox" id="menu-btn"/>
+      <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+      <ul class="menu">
+        <li><a href="Otoparklar.html">Otoparklar</a></li>
+
+        <!-- GİRİŞ YAPILDIYSA BURAYI GİZLE -->
+        <li><a href="giris-yap.html">Giriş Yap</a></li>
+        <!----------------------------------->
+
+        <!-- GİRİŞ YAPILMADIYSA BURAYI GİZLE -->
+        <li>
+         <a href="hesabim.html" class="account-profile">
+          <span class="account-profile-mobile">Hesabım</span>
+          <div class="profile">
+            <img src="img/person/indir.png">
+          </div>
+        </a>
+        </li>
+        <!------------------------------------->
+      </ul>
+    </div>
+    </header>
+
+    <!--================ Header Bitiş =================-->
+
+    <!--================ Main Alanı Başlangıç =================-->
+    <main>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-col1">
+                <a href="main.html">Ana Sayfa</a><span>/</span><a href="hesabim.html">Hesabım</a>
+            </div>
+            <div class="sidebar-col2">
+                <h2>Hesabım</h2>
+                <ul class="sidebar-menu">
+                    <li><i class="fa-regular fa-circle-user"></i><a href="#">Ayarlar</a></li>
+                    <li><i class="fa-solid fa-car"></i><a href="#myCars">Arabalarım</a></li>
+                    <li><i class="fa-solid fa-cart-plus"></i><a href="#">Siparişlerim</a></li>
+                    <li><i class="fa-solid fa-map-location-dot"></i><a href="#">Otopark Ekle</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="account-container">
+            <div class="account-inner-container">
+                <div class="account">
+                <div class="account-avatar"><img src="img/person/indir.png"></div>
+                <h3>@username</h3>
+                </div>
+                <div class="personal-info-container" id="myCars">
+                    <h2>Kişisel Bilgiler</h2>
+                    <hr>
+                    <div class="inner-personal-info-container">
+                        <div class="inner-personal-info-container-text">
+                            <h6>
+                               Bu kısımda hesabınız ile ilgili bilgileri düzenleyebilirsiniz.. 
+                            </h6>
+                        </div>
+                        <form class="personal-info" action="/gay.php" method="post" autocomplete="off">
+                            <div class="nameinfoContainer">
+                              <div>
+                              <label class="labelClass" for="username">Kullanıcı Adı</label>
+                              <input class="inputClass" type="text" id="username" name="username" placeholder="username" disabled>
+                              </div>
+                              <div>
+                              <label class="labelClass" for="email">E-posta</label>
+                              <input class="inputClass" type="email" id="email" name="email" placeholder="ornekeposta@gmail.com" disabled>
+                              </div>
+                              <div>
+                                <label class="labelClass" for="birthdate">Doğum Tarihiniz</label>
+                                <input class="inputClass" type="text" id="birthdate" name="birthdate" placeholder="25.04.2003" disabled>
+                                </div>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+                <!-- Arabalarım-->
+                <div class="cars-info-container">
+                    <h2>Arabalarım</h2>
+                    <hr>
+                    <!-- Çoğaltmaya burdan kopyalayarak başla-->
+                    <div class="inner-cars-info-container">
+                        <form id="carform" class="car-info" action="/gay.php" method="post" autocomplete="off">
+                            <div class="carinfoContainer">
+                              <div class="col1">
+                              <label class="labelClass" for="carbrand">Marka</label>
+                              <input class="inputClass" type="text" id="carbrand" name="carbrand" placeholder="AUDI" disabled>
+                              <label class="labelClass" for="model">Model</label>
+                              <input class="inputClass" type="text" id="model" name="model" placeholder="RS6 2017" disabled>
+                            </div>
+                            <div class="col2">
+                                <label class="labelClass" for="carabout">Açıklama</label>
+                                <textarea name="comment" form="carform" disabled>Siyah spoilerlı varexli</textarea>
+                                </div>
+                              <div class="col3">
+                                <div class="col3-mg1">
+                                <div>
+                                    <label class="labelClass" for="lpg">LPG</label>
+                                    <input class="checkboxClass" type="checkbox" id="lpg" name="lpg" checked disabled>
+                                </div>
+                                <div>
+                                    <label class="labelClass" for="lpg">LPG</label>
+                                    <input class="checkboxClass" type="color" id="lpg" name="lpg" value="#2596be" disabled>
+                                    </div>
+                                </div>
+                                <div class="col3-mg2">
+                                <label class="labelClass" for="uploadDate">Eklenme Tarihi</label>
+                                <input class="addedClass" type="text" id="uploadDate" name="uploadDate" placeholder="05.02.2021" disabled>
+                                </div>
+                                </div>
+                            </div>
+                          </form>
+                          <div class="manage-car">
+                            <button class="deletecar" onclick="document.getElementById('id01').style.display='block'">Sil</button>
+                            <!-- POP UP BAŞLANGIÇ -->
+                            <div id="id01" class="modal">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <form class="modal-content" action="/action_page.php">
+                                <div class="deletecar-container">
+                                <h1>Arabayı Sil</h1>
+                                <p>Arabanızı hesabınızdan kaldırmak istediğinize emin misiniz ?</p>
+
+                                <div class="clearfix">
+                                    <button type="button" class="cancelbtn">Iptal</button>
+                                    <button type="button" class="deletebtn">Sil</button>
+                                </div>
+                                </div>
+                            </form>
+                            </div>
+                            <!-- POP UP BİTİŞ -->
+                        </div>
+                    </div>
+                    <!-- ÇOĞALTMAK İÇİN BURAYA YAPIŞTIR-->
+                    
+                    <div class="addCars">
+                        <button>EKLE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <br><br>
+    <!--================ Main ALanı Bitiş ================-->
+
+    <!--================ Footer Alanı Başlangıç ================-->
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a></li>
+      </ul>
+      <ul class="footer-menu">
+        <li class="menu__item"><a class="menu__link" href="main.html">Ana Sayfa</a></li>
+        <li class="menu__item"><a class="menu__link" href="otoparklar.html">Otoparklar</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Hakkımızda</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Takımımız</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">İletişim</a></li>
+  
+      </ul>
+      <p>&copy;2023 <a style="color:#fff; text-decoration: none;" href="ayberkyavas.com" target="_blank">
+        YAVAS</a> | Tüm Hakları Saklıdır.</p>
+    </footer>
+    <!--================ Footer Alanı Bitiş ================-->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      
+      <script src="../js/main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>

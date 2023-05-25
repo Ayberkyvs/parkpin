@@ -561,4 +561,19 @@ body {
     vertical-align: top;
     margin-left: 3px;
   }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #dceffd;
+  font-family: 100% "Inter", sans-serif;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  font-family: "Inter", sans-serif;
 }/*# sourceMappingURL=girisyap.css.map */

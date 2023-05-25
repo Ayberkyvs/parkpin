@@ -1,0 +1,329 @@
+@import '../utilities/variables';
+body{
+    background-color: rgb(242, 242, 242) !important;
+}
+.main-container{
+    display: flex;
+    position: relative;
+    top: 125px;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgb(242, 242, 242);
+    margin-bottom: 200px;
+    .sidebar{
+        display: flex;
+        background-color: rgb(242, 242, 242);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 15%;
+        height: 100%;
+        .sidebar-col1{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 50px;
+            a{
+                color: black;
+                font-size: 12px;
+            }
+            a:hover{
+                color: blue;
+            }
+            a:focus{
+                color: blue;
+            }
+            span{
+                margin-left: 10px;
+                margin-right: 10px;
+                font-weight: bold;
+            }
+        }
+        .sidebar-col2{
+            display: flex;
+            justify-content: flex-start;
+            align-items:flex-start;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            h2{
+                font-family: $font-stack;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+            .sidebar-menu{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                list-style: none;
+                li{
+                    display: flex;
+                    text-align: left;
+                    padding: 10px;
+                    margin-left: -30px;
+                    width: 187px;
+                    height: 50px;
+                    align-items: center;
+                    i{
+                        margin-right: 10px;
+                    }
+                    a{
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+                li:hover{
+                    background-color: #5954f219;
+                    color: $button-color;
+                    a{
+                        color: $button-color;
+                    }
+                }
+            }
+        }
+    }
+    .account-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: transparent;
+        width: 85%;
+        height: auto;
+        .account-inner-container{
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            margin-top: 100px;
+            width: 100%;
+            height: auto;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            .account{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: auto;
+                margin-bottom: 50px;
+                .account-avatar{
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                    margin-bottom: 10px;
+                }
+                h3{
+                    
+                    font-family: $font-stack;
+                    font-size: 25px;
+                    line-height: 50px;
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.089);
+                }
+            }
+            .personal-info-container{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 100px;
+                height: auto;
+                h2{
+                    font-family: $font-stack;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                .inner-personal-info-container{
+                    display: flex;
+                    flex-direction: row;
+                    .inner-personal-info-container-text{
+                        width: 25%;
+                        height: 100%;
+                    }
+                    .personal-info{
+                        display: flex;
+                        flex-direction: column;
+                        width: 75%;
+                        height: 100%;
+                        label{
+                            font-family: $font-stack;
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                        }
+                        input{
+                            border: 1px solid black;
+                            height: 40px;
+                            background-color: rgba(211, 211, 211, 0.122);
+                        }
+                        input::placeholder{
+                            font-size: 14px;
+                            font-family: $font-stack;
+                            padding: 10px;
+                        }
+                        .nameinfoContainer{
+                            display: flex;
+                            width: 100%;
+                            justify-content: center;
+                            height: auto;
+                            div{
+                                display: flex;
+                                flex-direction: column;
+                                margin-right: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+            .cars-info-container{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                margin-bottom: 100px;
+                h2{
+                    font-family: $font-stack;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                .inner-cars-info-container{
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    margin-bottom: 20px;
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.089);
+                }
+                .car-info{
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    height: 100%;
+                    margin-bottom: 20px;
+                    label{
+                        font-family: $font-stack;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+                    .inputClass{
+                        border: 1px solid black;
+                        height: 40px;
+                        margin-bottom: 10px;
+                        background-color: rgba(211, 211, 211, 0.122);
+                    }
+                    .inputClass::placeholder{
+                        font-size: 14px;
+                        font-family: $font-stack;
+                        padding: 10px;
+                    }
+                    .carinfoContainer{
+                        display: flex;
+                        width: 100%;
+                        flex-direction: row;
+                        justify-content: center;
+                        height: auto;
+                        div{
+                            display: flex;
+                            width: 33%;
+                            flex-direction: column;
+                            margin-right: 50px;
+                        }
+                        textarea{
+                            border: 1px solid black;
+                            height: 100%;
+                            background-color: rgba(211, 211, 211, 0.122);
+                            margin-bottom: 30px;
+                        }
+                        textarea::placeholder{
+                            font-size: 14px;
+                            font-family: $font-stack;
+                            padding: 10px;
+                        }
+                        .checkboxClass{
+                            height: 40px;
+                            width: 40px;
+                        }
+                        .col3{
+                            width: auto;
+                            div{
+                                width: auto;
+                            }
+                            .col3-mg1{
+                                display: flex;
+                                flex-direction: row;
+                                div{
+                                    margin-right: 20px;
+                                }
+                            }
+                            .col3-mg2{
+                                margin-top: 10px;
+                            }
+                            .addedClass{
+                                border: 1px solid black;
+                                height: 40px;
+                                width: 100px;
+                                background-color: rgba(211, 211, 211, 0.122);
+                            }
+                            .addedClass::placeholder{
+                                font-size: 14px;
+                                font-family: $font-stack;
+                                padding: 10px;
+                            }
+                            
+                        }
+                    }
+                }
+                .manage-car{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    height: 100%;
+                    width: 100px;
+                    .deletecar{
+                        width: 100%;
+                        height: 40px;
+                        padding: 5px;
+                        background-color: darkred;
+                        color: white;
+                        font-family: $font-stack;
+                        font-size: 14px;
+                        border: 1px solid black;
+                        border-radius: 4px;
+                    }
+                    .deletecar:hover{
+                        animation: shake 0.3s ease-in-out infinite;
+                        @keyframes shake {
+                            0% {
+                              transform: translateX(-2px);
+                            }
+                            50% {
+                              transform: translateX(2px);
+                            }
+                            100% {
+                              transform: translateX(-2px);
+                            }
+                        }
+                    } 
+                }
+                .addCars{
+                    margin-top: 20px;
+                    width: 100%;
+                    height: auto;
+                    button{
+                        width: 100px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
