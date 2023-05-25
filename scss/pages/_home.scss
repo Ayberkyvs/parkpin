@@ -1,23 +1,14 @@
-body
-{
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    padding: 0px;
-    background-color: rgb(209, 209, 209);
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
-}
-
+@import '../utilities/variables';
+@import '../utilities/reset';
 /*MAIN BASLANGIC */
 .main-container
 {
     display: flex;
     width: 100%;
-    height: 800px;
+    height: 100%;
     position: relative;
-    top: 172px;
-    background-image: url("../img/Adsız.jpg");
+    top: 126px;
+    background-image: url("../../img/pages/home/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -26,7 +17,7 @@ body
 .main-container-left
 {
     display: flex;
-    height: 80%;
+    min-height: 100%; 
     width: 50%;
     align-items: center;
     justify-content: flex-end;
@@ -37,22 +28,23 @@ body
 {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    justify-content: center;
     width: 90%;
+    height: 100%;
     margin-right: 15px;
 }
 .main-container-left-texts
 {
     display: block;
     width: 100%;
-    font-family: 'Inter', sans-serif;
+    font-family: $font-stack;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 40px;
 }
 #main-container-left-texts-right
 {
-    font-size: 20px;
+    font-size: 16px;
 }
 .searchbox
 {
@@ -61,7 +53,7 @@ body
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 172px;
+    height: 200px;
     background-color: white;
     box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -70,22 +62,23 @@ body
 #container-blank
 {
     width: 100%;
-    height: 10%;
+    height: 20%;
 }
 #searchbox-div
 {
     display: flex;
     width: 90%;
-    height: 20%;
+    height: 30%;
     flex-direction: row;
     justify-content: flex-start;
     align-items: left;
 }
 #searchbox-div > h3 
 {
-    font-family: 'Inter', sans-serif;
+    font-family: $font-stack;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 .form
 {
@@ -94,14 +87,7 @@ body
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-}
-#searchbox-input
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 90%;
-    height: 200px;
+    align-items: center;
 }
 #selectCity
 {
@@ -122,9 +108,9 @@ body
 }
 label
 {
-    font-family: 'Inter', sans-serif;
+    font-family: $font-stack;
     font-weight: bold;
-    height: 35px;
+    height: 25px;
     font-size: 14px;
 }
 select
@@ -133,28 +119,34 @@ select
     height: 50px;
     opacity: 0.6;
     border-radius: 4px;
-    font-family: 'Inter', sans-serif;
+    font-family: $font-stack;
     color: black;
 }
 option
 {
-    font-family: 'Inter', sans-serif;
+    font-family: $font-stack;
     color: black;
+    background-color: rgb(244, 244, 244);
+    padding: 5;
+    font-size: 14px;
+    font-size-adjust: 1;
+    padding: 10px;
 }
 #submitButton
 {
     display: flex;
     justify-content: flex-start;
     text-align: center;
-    align-items: center;
+    align-items: flex-start;
     width: 40%;
     height: 100%;
+    padding-top: 26px;
     margin-left: 5%;
 }
 #submitButton > button
 {
     width: 100%;
-    height: 50px;
+    height: 49px;
     background-color: #5a54f2;
     border: none;
     border-radius: 4px;
@@ -164,7 +156,7 @@ option
     display: inline-block;
     font-size: 14px;
     cursor: pointer;
-    font-family: 'Inter';
+    font-family: $font-stack;
     font-weight: bold;
     box-sizing: border-box;
 }
@@ -181,7 +173,10 @@ option
 .main-container-right-in
 {
     margin-right: -100px;
-    margin-top: 150px;
+    margin-top: 10px;
+    img{
+        transform: scale(0.9);
+    }
 }
 #blank-container
 {
@@ -345,7 +340,7 @@ option
 .review-h3 > h3 
 {
     font-size: 23px;
-    font-family: 'Inter', sans-serif;
+    font-family: $font-stack;
     font-weight: bold;
 }
 .review-feedbacks
@@ -368,7 +363,7 @@ option
 .addedBy > h3 
 {
     font-size: 18px;
-    font-family: 'Inter', sans-serif;
+    font-family: $font-stack;
     font-weight: bold;
     text-align: center;
     color: black;
@@ -398,7 +393,7 @@ option
 .comment-author > h3
 {
     font-size: 18px;
-    font-family: 'Inter', sans-serif;
+    font-family:  $font-stack;
     font-weight: bold;
     color: black;
 }
@@ -454,7 +449,7 @@ option
     margin-left: 20px;
     text-align: center;
     color: black;
-    font-family: 'Inter', sans-serif;
+    font-family: $font-stack;
     font-weight: bold;
 }
 .photo-section
@@ -483,29 +478,26 @@ option
     .main-container
     {
         flex-direction: column;
-        height: 1000px;
+        height: auto;
+        min-height: 600px;
     }
     .main-container-left
     {
         width: 100%;
+        height: 100%;
+        margin-top: 100px;
         justify-content: center;
     }
     .main-container-left-in
     {
-        margin-right: 0px;
+        margin: 0px;
+        height: auto;
+        justify-content: flex-start;
     }
     .main-container-right
     {
+        display: none;
         width: 100%;
-    }
-    .main-container-right-in
-    {
-        margin: 0px;
-    }
-    .main-container-right-in > img 
-    {
-        width: 550px;
-        height: 600px;
     }
     #map-container
     {
@@ -549,41 +541,47 @@ option
 @media screen and (max-width: 799px) {
     .main-container
     {
-        top: 102px;
+        top: 85px;
         width: 100%;
         background-position-y: 0px;
-    }
-    .main-container
-    {
         flex-direction: column;
         height: 1000px;
     }
     .main-container-left
     {
         width: 100%;
-        height: 100%;
+        height: auto;
+        min-height: 500px;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0;
     }
-    .main-container-left-İN
+    .main-container-left-in
     {
-        margin: 0px;
+        margin-top: 50px;
+        height: 100%;
     }
     .main-container-right
     {
+        margin: 0;
+        display: flex;
         width: 100%;
+        height: 90%;
     }
     .main-container-right-in
     {
+        height: 100%;
         margin: 0px;
     }
     #main-container-left-texts-right
     {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 20px;
     }
     .main-container-right-in > img 
     {
         width: 100%;
-        height: 500px;
+        height: auto;
     }
     .main-container-left-texts
     {

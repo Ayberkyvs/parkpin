@@ -1,23 +1,14 @@
-@import "_variables.scss";
-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(209, 209, 209);
-    font-family: 100% $font-stack;
-    font-weight: bold;
-}
+@import "../utilities/variables";
+@import '../utilities/reset';
 
 .main-container {
-    border: 1px solid green;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 800px;
     position: relative;
-    top: 172px;
-    background-image: url("../img/Adsız.jpg");
+    top: 126px;
+    background-image: url("../../img/pages/home/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -69,14 +60,18 @@ body {
                         width: 100%;
                     }
                     input {
+                        padding: 20px;
                         width: 100%;
                         height: 60px;
                         border: none;
                         border-radius: 5px;
-                        font-size: 20px;
+                        font-size: 16px;
                         font-family: $font-stack;
                         -webkit-transition-duration: 0.2s; 
                         transition-duration: 0.4s;
+                    }
+                    input::placeholder{
+                        font-size: 16px;
                     }
                     input:hover
                     {
@@ -234,7 +229,7 @@ body {
 }
 @media screen and (max-width: $medium) {
     .main-container{
-        top: 102px;
+        top: 85px;
     }
     .loginWithButtons{
         width: 60px !important;

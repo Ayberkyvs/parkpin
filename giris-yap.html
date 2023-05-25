@@ -4,8 +4,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Giriş Yap</title>
-        <link rel="stylesheet" href="../css/header.css"/>
-        <link rel="stylesheet" href="../css/giris-yap.css"/>
+        <link rel="stylesheet" href="scss/girisyap.css"/>
         <link rel="icon" type="image/x-icon" href="/img/favicon.png">
         <!--<link rel="stylesheet" href="../css/main.css"/> -->
         <link
@@ -53,24 +52,37 @@
 
     <!--================ Demo Bitiş =================-->
 
-    <!--================ Header Başlangıç =================-->
+        <!--================ Header Başlangıç =================-->
     
-    <header>
-      <div class="header">
-        <div id="mainLogo" class="mainLogo">
-        <div id="mainLogoDot"><img src="../img/mainLogo.png" alt="Logo"></div>
-        <h6><a href="main.html" style="text-decoration: none; color: black; cursor: default;">parkpin</a></h6></div>
-      <input class="menu-btn" type="checkbox" id="menu-btn"/>
-      <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-      <ul class="menu">
-        <li><a href="hakkımızda.html">Hakkımızda</a></li>
-        <li><a href="incelemeler.html">İncelemeler</a></li>
-        <li><a href="giris-yap.html">Giriş Yap</a></li>
-      </ul>  
-    </div>
-    </header>
-
-    <!--================ Header Bitiş =================-->
+        <header>
+          <div class="header">
+            <div id="mainLogo" class="mainLogo">
+            <div id="mainLogoDot"><img src="img/logo/mainLogo.png" alt="Logo"></div>
+            <h6><a href="main.html" style="text-decoration: none; color: black; cursor: default;">parkpin</a></h6></div>
+          <input class="menu-btn" type="checkbox" id="menu-btn"/>
+          <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+          <ul class="menu">
+            <li><a href="Otoparklar.html">Otoparklar</a></li>
+    
+            <!-- GİRİŞ YAPILDIYSA BURAYI GİZLE -->
+            <li><a href="giris-yap.html">Giriş Yap</a></li>
+            <!----------------------------------->
+    
+            <!-- GİRİŞ YAPILMADIYSA BURAYI GİZLE -->
+            <li>
+             <a href="hesabim.html" class="account-profile">
+              <span class="account-profile-mobile">Hesabım</span>
+              <div class="profile">
+                <img src="img/person/indir.png">
+              </div>
+            </a>
+            </li>
+            <!------------------------------------->
+          </ul>
+        </div>
+        </header>
+    
+        <!--================ Header Bitiş =================-->
 
     <!--================ Main Alanı Başlangıç =================-->
     <main>
@@ -114,7 +126,7 @@
           <!--================ Sağ Container Başlangıç =================-->
           <div class="right-container">
             <div class="right-container-in">
-              <img src="../img/loginAvatar.png" alt="Login Avatar">
+              <img src="img/pages/giris/loginAvatar.png" alt="Login Avatar">
             </div>
           </div>
           <!--================ Sağ Container Bitiş =================-->
