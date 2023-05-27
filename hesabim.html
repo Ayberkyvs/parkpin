@@ -54,7 +54,7 @@
       <input class="menu-btn" type="checkbox" id="menu-btn"/>
       <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
       <ul class="menu">
-        <li><a href="Otoparklar.html">Otoparklar</a></li>
+        <li><a href="otoparklar.html">Otoparklar</a></li>
 
         <!-- GİRİŞ YAPILDIYSA BURAYI GİZLE -->
         <li><a href="giris-yap.html">Giriş Yap</a></li>
@@ -88,8 +88,8 @@
                 <ul class="sidebar-menu">
                     <li><i class="fa-regular fa-circle-user"></i><a href="#">Ayarlar</a></li>
                     <li><i class="fa-solid fa-car"></i><a href="#myCars">Arabalarım</a></li>
-                    <li><i class="fa-solid fa-cart-plus"></i><a href="#">Siparişlerim</a></li>
-                    <li><i class="fa-solid fa-map-location-dot"></i><a href="#">Otopark Ekle</a></li>
+                    <li><i class="fa-solid fa-cart-plus"></i><a href="#myOrders">Siparişlerim</a></li>
+                    <li><i class="fa-solid fa-map-location-dot"></i><a href="addparkinlots.html">Otopark Ekle</a></li>
                 </ul>
             </div>
         </div>
@@ -151,7 +151,7 @@
                                     <input class="checkboxClass" type="checkbox" id="lpg" name="lpg" checked disabled>
                                 </div>
                                 <div>
-                                    <label class="labelClass" for="lpg">LPG</label>
+                                    <label class="labelClass" for="lpg">Renk</label>
                                     <input class="checkboxClass" type="color" id="lpg" name="lpg" value="#2596be" disabled>
                                     </div>
                                 </div>
@@ -183,10 +183,158 @@
                         </div>
                     </div>
                     <!-- ÇOĞALTMAK İÇİN BURAYA YAPIŞTIR-->
-                    
-                    <div class="addCars">
-                        <button>EKLE</button>
+                    <!-- Çoğaltmaya burdan kopyalayarak başla-->
+                    <div class="inner-cars-info-container">
+                      <form id="carform" class="car-info" action="/gay.php" method="post" autocomplete="off">
+                          <div class="carinfoContainer">
+                            <div class="col1">
+                            <label class="labelClass" for="carbrand">Marka</label>
+                            <input class="inputClass" type="text" id="carbrand" name="carbrand" placeholder="AUDI" disabled>
+                            <label class="labelClass" for="model">Model</label>
+                            <input class="inputClass" type="text" id="model" name="model" placeholder="RS6 2017" disabled>
+                          </div>
+                          <div class="col2">
+                              <label class="labelClass" for="carabout">Açıklama</label>
+                              <textarea name="comment" form="carform" disabled>Siyah spoilerlı varexli</textarea>
+                              </div>
+                            <div class="col3">
+                              <div class="col3-mg1">
+                              <div>
+                                  <label class="labelClass" for="lpg">LPG</label>
+                                  <input class="checkboxClass" type="checkbox" id="lpg" name="lpg" checked disabled>
+                              </div>
+                              <div>
+                                  <label class="labelClass" for="lpg">Renk</label>
+                                  <input class="checkboxClass" type="color" id="lpg" name="lpg" value="#2596be" disabled>
+                                  </div>
+                              </div>
+                              <div class="col3-mg2">
+                              <label class="labelClass" for="uploadDate">Eklenme Tarihi</label>
+                              <input class="addedClass" type="text" id="uploadDate" name="uploadDate" placeholder="05.02.2021" disabled>
+                              </div>
+                              </div>
+                          </div>
+                        </form>
+                        <div class="manage-car">
+                          <button class="deletecar" onclick="document.getElementById('id01').style.display='block'">Sil</button>
+                          <!-- POP UP BAŞLANGIÇ -->
+                          <div id="id01" class="modal">
+                          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                          <form class="modal-content" action="/action_page.php">
+                              <div class="deletecar-container">
+                              <h1>Arabayı Sil</h1>
+                              <p>Arabanızı hesabınızdan kaldırmak istediğinize emin misiniz ?</p>
+
+                              <div class="clearfix">
+                                  <button type="button" class="cancelbtn">Iptal</button>
+                                  <button type="button" class="deletebtn">Sil</button>
+                              </div>
+                              </div>
+                          </form>
+                          </div>
+                          <!-- POP UP BİTİŞ -->
+                      </div>
+                  </div>
+                  <!-- ÇOĞALTMAK İÇİN BURAYA YAPIŞTIR-->                
+                  <form class="addCars" action="gay.php">
+                    <a href="addcar.html"><button type="button" class="btn btn-success">Araba Ekle</button></a>
+                  </form>
+                      <!-- POP UP BİTİŞ -->
+                </div>
+                <div class="myOrders-container" id="myOrders">
+                  <h2>Siparişlerim</h2>
+                    <hr>
+                    <div class="container-fluid">
+                      <!-- Çoğaltmaya burdan kopyalayarak başla-->
+                    <div class="card mb-3" style="max-width: 640px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="img/otopark/images1.jpeg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Gaziemir Optimum</h5>
+                            <p class="card-text">Optimum premium kapalı otoparkı</p>
+                            <p class="card-text"><small class="text-body-secondary">3 gün önce sipariş edildi</small></p>
+                            <!-- Order Buttons Başlangıç-->
+                            <div class="OrderButtons">
+                              <form action="gay.php">
+                                <button type="button" class="btn btn-success">Başlat</button>
+                              </form>
+                              <form action="gay.php">
+                                <button type="button" class="btn btn-danger">Sil</button>
+                              </form>
+                              <form action="gay.php">
+                                <button type="button" class="btn btn-warning">Bitir</button>
+                              </form>
+                              </div>
+                              <!--=====================-->
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    <!-- BURAYA KADAR KOPYALA VE ALT SATIRA YAPIŞTIR -->
+                     <!-- Çoğaltmaya burdan kopyalayarak başla-->
+                     <div class="card mb-3" style="max-width: 640px; height: auto !important;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="img/otopark/images3.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Konya Steakhouse</h5>
+                            <p class="card-text">Konya Steakhouse Vale hizmeti, Açık ve güvenlikli otopark</p>
+                            <p class="card-text"><small class="text-body-secondary">5 gün önce sipariş edildi</small></p>
+                            <!-- Order Buttons Başlangıç-->
+                            <div class="OrderButtons">
+                              <form action="gay.php">
+                                <button type="button" class="btn btn-success">Başlat</button>
+                              </form>
+                              <form action="gay.php">
+                                <button type="button" class="btn btn-danger">Sil</button>
+                              </form>
+                              <form action="gay.php">
+                                <button type="button" class="btn btn-warning">Bitir</button>
+                              </form>
+                              </div>
+                              <!--=====================-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- BURAYA KADAR KOPYALA VE ALT SATIRA YAPIŞTIR -->
+
+                     <!-- Çoğaltmaya burdan kopyalayarak başla-->
+                     <div class="card mb-3" style="max-width: 640px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="img/otopark/iamges2.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">İzmir Alsancak Merkez</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">7 gün önce sipariş edildi</small></p>
+                            <!-- Order Buttons Başlangıç-->
+                            <div class="OrderButtons">
+                              <form action="gay.php">
+                                <button type="button" class="btn btn-success">Başlat</button>
+                              </form>
+                              <form action="gay.php">
+                                <button type="button" class="btn btn-danger">Sil</button>
+                              </form>
+                              <form action="gay.php">
+                                <button type="button" class="btn btn-warning">Bitir</button>
+                              </form>
+                              </div>
+                              <!--=====================-->  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- BURAYA KADAR KOPYALA VE ALT SATIRA YAPIŞTIR -->
+                  </div>
+                    
                 </div>
             </div>
         </div>

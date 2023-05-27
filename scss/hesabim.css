@@ -338,16 +338,182 @@ body {
     transform: translateX(-2px);
   }
 }
-.main-container .account-container .account-inner-container .cars-info-container .addCars {
-  margin-top: 20px;
+.main-container .account-container .account-inner-container .myOrders-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  height: auto;
+}
+.main-container .account-container .account-inner-container .myOrders-container h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 100%;
   height: auto;
 }
-.main-container .account-container .account-inner-container .cars-info-container .addCars button {
-  width: 100px;
-  height: 30px;
+
+.col-md-4 img {
+  min-height: 100%;
+  max-height: 100%;
+  min-width: 100%;
 }
 
+.OrderButtons {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+}
+.OrderButtons button {
+  width: 80px !important;
+  height: 40px;
+  margin-right: 20px;
+  border: 1px solid black !important;
+  font-family: "Inter", sans-serif;
+}
+.OrderButtons .btn-success:hover {
+  transition: ease-in-out 0.15s;
+  border: 2px solid green;
+  background-color: white;
+  color: black;
+}
+.OrderButtons .btn-danger:hover {
+  border: 1px solid black;
+}
+.OrderButtons .btn-warning:hover {
+  border: 1px solid black;
+}
+
+.card {
+  height: auto !important;
+}
+.card .row {
+  height: 100% !important;
+}
+.card .col-md-8 {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+}
+.card .col-md-8 .card-body {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: space-between;
+  align-items: flex-start !important;
+}
+
+@media screen and (max-width: 799px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    margin: 0px !important;
+    display: flex;
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+  .sidebar .sidebar-col1 {
+    margin: 0 !important;
+  }
+  .sidebar .sidebar-col2 {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .sidebar .sidebar-col2 .sidebar-menu {
+    flex-direction: row !important;
+    margin: 0px !important;
+    margin-left: -30px !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .sidebar .sidebar-col2 .sidebar-menu li {
+    width: auto !important;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 !important;
+  }
+  .account-container {
+    width: 100% !important;
+  }
+  .account-container .account-inner-container {
+    width: 100% !important;
+  }
+  .account-container .personal-info-container {
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .account-container .personal-info-container .inner-personal-info-container {
+    flex-direction: column !important;
+  }
+  .account-container .personal-info-container .inner-personal-info-container .inner-personal-info-container-text {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  .account-container .personal-info-container .inner-personal-info-container .personal-info {
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .account-container .personal-info-container .inner-personal-info-container .personal-info div {
+    flex-direction: column !important;
+    margin-bottom: 20px;
+  }
+  .col-md-4 img {
+    height: 300px !important;
+    max-height: 300px !important;
+  }
+  .inner-cars-info-container {
+    flex-direction: column !important;
+  }
+  .inner-cars-info-container .car-info {
+    flex-direction: row !important;
+  }
+  .inner-cars-info-container .car-info .carinfoContainer {
+    flex-direction: column !important;
+  }
+  .inner-cars-info-container .car-info .carinfoContainer .col1 {
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .inner-cars-info-container .car-info .carinfoContainer .col2 {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .inner-cars-info-container .car-info .carinfoContainer .col2 textarea {
+    height: 80px !important;
+  }
+  .inner-cars-info-container .car-info .carinfoContainer .col3 {
+    width: 100% !important;
+    flex-direction: row !important;
+  }
+  .inner-cars-info-container .car-info .carinfoContainer .col3 .col3-mg1 {
+    flex-direction: row;
+    width: 50% !important;
+    margin: 0 !important;
+  }
+  .inner-cars-info-container .car-info .carinfoContainer .col3 .col3-mg2 {
+    width: 50% !important;
+    height: 100%;
+    margin: 0 !important;
+    margin-left: 20px !important;
+    align-items: flex-end;
+  }
+  .inner-cars-info-container .manage-car {
+    margin-bottom: 20px;
+  }
+}
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 .account-profile-mobile {
   display: none !important;
 }

@@ -202,9 +202,11 @@ option {
 
 #map-container {
   position: relative;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   width: 100%;
-  height: 1000px;
+  height: 800px;
   display: flex;
   background-image: url("../../img/pages/home/revbg.png");
   background-position: center;
@@ -217,16 +219,10 @@ option {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 800px;
-}
-
-.mapbox {
-  margin-top: 100px;
-  border-radius: 30px;
-  width: 85%;
-  height: 75%;
-  background-color: black;
+  width: 80%;
+  height: 500px;
+  margin-bottom: 100px;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -250,19 +246,9 @@ option {
     display: none;
     width: 100%;
   }
-  #map-container {
-    flex-direction: column;
-    height: auto;
-  }
   .mapbox-container {
-    width: 100%;
+    width: 90%;
     margin-bottom: 100px;
-  }
-  .mapbox {
-    width: 80%;
-  }
-  .mapinfo-container {
-    width: 100%;
   }
 }
 @media screen and (max-width: 799px) {
@@ -481,6 +467,12 @@ option {
     margin-right: 70px;
   }
 }
+#map {
+  height: 100% !important;
+  width: 100% !important;
+  background-color: red;
+}
+
 #demo-div {
   display: flex;
   align-items: center;
