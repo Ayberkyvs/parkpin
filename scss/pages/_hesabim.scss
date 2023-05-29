@@ -288,6 +288,13 @@ body{
                     justify-content: flex-start;
                     height: 100%;
                     width: 100px;
+                    #editcar{
+                        border: 1px solid black !important;
+                        width: 100%;
+                        font-size: 14px;
+                        height: 40px;
+                        margin-top: 10px;
+                    }
                     .deletecar{
                         width: 100%;
                         height: 40px;
@@ -348,8 +355,20 @@ body{
 .OrderButtons{
     display: flex;
     justify-content: flex-start;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
+    h5{
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        span{
+            font-size: 14px;
+        }
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+    }
     button{
         width: 80px !important;
         height: 40px;
@@ -359,9 +378,9 @@ body{
     }
     .btn-success:hover{
         transition: ease-in-out 0.150s;
-        border: 2px solid green;
+        border: 2px solid green !important;
         background-color: white;
-        color: black;
+        color: green;
     }
     .btn-danger:hover{
         border: 1px solid black;

@@ -313,6 +313,13 @@ body {
   height: 100%;
   width: 100px;
 }
+.main-container .account-container .account-inner-container .cars-info-container .manage-car #editcar {
+  border: 1px solid black !important;
+  width: 100%;
+  font-size: 14px;
+  height: 40px;
+  margin-top: 10px;
+}
 .main-container .account-container .account-inner-container .cars-info-container .manage-car .deletecar {
   width: 100%;
   height: 40px;
@@ -369,8 +376,20 @@ body {
 .OrderButtons {
   display: flex;
   justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
+}
+.OrderButtons h5 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.OrderButtons h5 span {
+  font-size: 14px;
+}
+.OrderButtons div {
+  display: flex;
+  flex-direction: row;
 }
 .OrderButtons button {
   width: 80px !important;
@@ -381,9 +400,9 @@ body {
 }
 .OrderButtons .btn-success:hover {
   transition: ease-in-out 0.15s;
-  border: 2px solid green;
+  border: 2px solid green !important;
   background-color: white;
-  color: black;
+  color: green;
 }
 .OrderButtons .btn-danger:hover {
   border: 1px solid black;
@@ -848,7 +867,7 @@ hr {
   background-color: #FFDD63;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 25px;
   z-index: 3;

@@ -1,174 +1,4 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-.account-profile-mobile {
-  display: none !important;
-}
-
-.account-profile {
-  display: flex;
-  position: relative;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 120px;
-  height: 60px;
-}
-.account-profile .profile {
-  position: absolute;
-  top: 0;
-  border-radius: 50%;
-  border: 1px solid black;
-  width: 60px;
-  height: 60px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.account-profile .profile img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-@media screen and (max-width: 799px) {
-  .account-profile {
-    width: 100%;
-  }
-  .profile {
-    width: 100% !important;
-    display: none !important;
-  }
-  .account-profile-mobile {
-    display: flex !important;
-  }
-}
-/* MENU AMK MENU ANASINI SİKTİĞİM MENYSY */
-.menu > li > a {
-  color: rgb(0, 0, 0);
-  font-family: "Inter", sans-serif;
-  font-weight: bold;
-}
-
-.header .mainLogo {
-  float: left;
-  display: block;
-}
-
-.menu {
-  position: relative;
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  overflow: hidden;
-  background-color: #FFDD63;
-}
-
-.menu a {
-  display: block;
-  padding: 20px;
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-}
-
-.menu a:hover {
-  background-color: #ccb04f;
-}
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-.header .menu-icon {
-  padding: 28px 20px;
-  position: relative;
-  float: right;
-  cursor: pointer;
-}
-
-.header .menu-icon .nav-icon {
-  background: black;
-  display: block;
-  height: 2px;
-  width: 18px;
-  position: relative;
-  transition: background 0.2s ease-out;
-}
-
-.header .menu-icon .nav-icon:before {
-  background: black;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: 5px;
-}
-
-.header .menu-icon .nav-icon:after {
-  background: black;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: -5px;
-}
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 240px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-@media (min-width: 800px) {
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-  .header {
-    display: flex;
-  }
-  #mainLogo {
-    margin-left: 70px;
-  }
-  .menu {
-    margin-right: 70px;
-  }
-}
-#map {
-  height: 100% !important;
-  width: 100% !important;
-  background-color: red;
-}
-
 #demo-div {
   display: flex;
   align-items: center;
@@ -432,64 +262,6 @@
     background-positon-x: 0px;
   }
 }
-.main-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  position: relative;
-  top: 126px;
-  margin-bottom: 300px;
-}
-.main-container .map-container {
-  width: 100%;
-  height: 600px;
-  margin-bottom: 100px;
-}
-.main-container .col2 {
-  justify-content: center;
-  display: flex;
-  width: 100%;
-}
-.main-container .allparkinglots-container {
-  display: flex;
-  flex-direction: column !important;
-  justify-content: center;
-  width: 90%;
-  height: auto;
-  margin-bottom: 100px;
-}
-.main-container .allparkinglots-container h2 {
-  font-size: 25px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
-.main-container .allparkinglots-container .card img {
-  max-height: 350px;
-  height: 350px;
-  min-height: 350px;
-}
-.main-container .allparkinglots-container .card img:hover {
-  filter: blur(1px) grayscale(100);
-  border: 1px solid black;
-  transition: ease-in-out 0.3s;
-  cursor: pointer;
-}
-.main-container .allparkinglots-container .card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media screen and (max-width: 799px) {
-  .main-container {
-    top: 85px;
-  }
-  .map-container {
-    height: 500px !important;
-  }
-}
-/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 body {
   display: flex;
   flex-direction: column;
@@ -504,4 +276,211 @@ body {
 
 * {
   font-family: "Inter", sans-serif;
-}/*# sourceMappingURL=otoparklar.css.map */
+}
+
+.mainContainer {
+  flex-direction: row;
+  position: relative;
+  top: 25px;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.mainContainer .brandContainer {
+  width: 20%;
+  height: 100%;
+  background-color: #FFDD63;
+  background-image: url("../../img/pages/register/rezervasyon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer .brandContainer .brand {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+.mainContainer .brandContainer .brand div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  height: auto;
+  margin-left: 60px;
+}
+.mainContainer .brandContainer .brand div img {
+  width: 35px;
+  height: 35px;
+}
+.mainContainer .brandContainer .brand div h6 {
+  margin-top: 6px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.mainContainer .brandContainer .brandContainerBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+}
+.mainContainer .brandContainer .brandContainerBody .sloganContainer {
+  display: flex;
+  position: relative;
+  top: 110px;
+  width: 70%;
+  height: auto;
+}
+.mainContainer .brandContainer .brandContainerBody .sloganContainer h5 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: left;
+}
+.mainContainer .brandContainer .brandContainerBody .moreoptionsContainer {
+  display: flex;
+  width: 70%;
+  height: 20px;
+  margin-bottom: 50px;
+}
+.mainContainer .brandContainer .brandContainerBody .moreoptionsContainer h6 a {
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.form-container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center;
+  background-color: #dceffd;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto;
+  min-height: 70%;
+}
+.form-container form h2 {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+.form-container form h5 {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+.form-container form label {
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+.form-container form select {
+  border: 1px solid black;
+  border-radius: 5px !important;
+  height: 40px;
+}
+.form-container form input {
+  border: 1px solid black;
+  border-radius: 5px !important;
+  height: 40px;
+}
+.form-container form button {
+  border: 1px solid black;
+  height: 40px;
+}
+
+.parking-slot {
+  height: 250px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.mb-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1400px) {
+  .mainContainer {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .mainContainer .brandContainer {
+    padding-top: 20px;
+    width: 100%;
+    height: 30%;
+    flex-direction: columns;
+    background-image: none;
+  }
+  .mainContainer .brandContainer .brand {
+    width: 100%;
+    height: 10%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .mainContainer .brandContainer .brand div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+  }
+  .mainContainer .brandContainer .brandContainerBody {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  .mainContainer .brandContainer .brandContainerBody .sloganContainer {
+    position: relative;
+    top: 0px;
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .mainContainer .brandContainer .brandContainerBody .sloganContainer h5 {
+    font-size: 20px;
+  }
+  .mainContainer .brandContainer .brandContainerBody .moreoptionsContainer {
+    width: 80%;
+    height: 20px;
+    margin-bottom: 20px;
+  }
+  .mainContainer .brandContainer .brandContainerBody .moreoptionsContainer h6 a {
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .form-container {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .form-container form {
+    margin-top: 100px;
+    width: 80%;
+    height: 100% !important;
+    margin-bottom: 100px;
+  }
+}
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other *//*# sourceMappingURL=register.css.map */

@@ -19,7 +19,7 @@
 <body>
   
     <!--================ Loader Başlangıç =================-->
-      <div id="loder"></div>
+      <div id="loader"></div>
     <!--================ Loader Bitiş =================-->
 
     <!--================ Demo Başlangıç =================-->
@@ -89,7 +89,7 @@
                     <li><i class="fa-regular fa-circle-user"></i><a href="#">Ayarlar</a></li>
                     <li><i class="fa-solid fa-car"></i><a href="#myCars">Arabalarım</a></li>
                     <li><i class="fa-solid fa-cart-plus"></i><a href="#myOrders">Siparişlerim</a></li>
-                    <li><i class="fa-solid fa-map-location-dot"></i><a href="addparkinlots.html">Otopark Ekle</a></li>
+                    <li><i class="fa-solid fa-map-location-dot"></i><a href="add/addparkinglots.html">Otopark Ekle</a></li>
                 </ul>
             </div>
         </div>
@@ -164,6 +164,7 @@
                           </form>
                           <div class="manage-car">
                             <button class="deletecar" onclick="document.getElementById('id01').style.display='block'">Sil</button>
+                            <a href="add/editcar.html"><button type="button" class="btn btn-primary" id="editcar">Düzenle</button></a>
                             <!-- POP UP BAŞLANGIÇ -->
                             <div id="id01" class="modal">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -217,6 +218,7 @@
                         </form>
                         <div class="manage-car">
                           <button class="deletecar" onclick="document.getElementById('id01').style.display='block'">Sil</button>
+                          <a href="add/editcar.html"><button type="button" class="btn btn-primary" id="editcar">Düzenle</button></a>
                           <!-- POP UP BAŞLANGIÇ -->
                           <div id="id01" class="modal">
                           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -237,9 +239,8 @@
                   </div>
                   <!-- ÇOĞALTMAK İÇİN BURAYA YAPIŞTIR-->                
                   <form class="addCars" action="gay.php">
-                    <a href="addcar.html"><button type="button" class="btn btn-success">Araba Ekle</button></a>
+                    <a href="add/addcar.html"><button type="button" class="btn btn-success">Araba Ekle</button></a>
                   </form>
-                      <!-- POP UP BİTİŞ -->
                 </div>
                 <div class="myOrders-container" id="myOrders">
                   <h2>Siparişlerim</h2>
@@ -258,6 +259,10 @@
                             <p class="card-text"><small class="text-body-secondary">3 gün önce sipariş edildi</small></p>
                             <!-- Order Buttons Başlangıç-->
                             <div class="OrderButtons">
+                              <!-- DURUM -->
+                              <h5>Durum: <span style="color: green;">Açık</span></h5>
+                              <!----------->
+                              <div>
                               <form action="gay.php">
                                 <button type="button" class="btn btn-success">Başlat</button>
                               </form>
@@ -267,6 +272,7 @@
                               <form action="gay.php">
                                 <button type="button" class="btn btn-warning">Bitir</button>
                               </form>
+                              </div>
                               </div>
                               <!--=====================-->
                           </div>
@@ -287,6 +293,10 @@
                             <p class="card-text"><small class="text-body-secondary">5 gün önce sipariş edildi</small></p>
                             <!-- Order Buttons Başlangıç-->
                             <div class="OrderButtons">
+                              <!-- DURUM -->
+                              <h5>Durum: <span style="color: red;">Kapalı</span></h5>
+                              <!----------->
+                              <div>
                               <form action="gay.php">
                                 <button type="button" class="btn btn-success">Başlat</button>
                               </form>
@@ -296,6 +306,7 @@
                               <form action="gay.php">
                                 <button type="button" class="btn btn-warning">Bitir</button>
                               </form>
+                              </div>
                               </div>
                               <!--=====================-->
                           </div>
@@ -317,6 +328,10 @@
                             <p class="card-text"><small class="text-body-secondary">7 gün önce sipariş edildi</small></p>
                             <!-- Order Buttons Başlangıç-->
                             <div class="OrderButtons">
+                              <!-- DURUM -->
+                              <h5>Durum: <span style="color: orange;">Süresi Geçmiş</span></h5>
+                              <!----------->
+                              <div>
                               <form action="gay.php">
                                 <button type="button" class="btn btn-success">Başlat</button>
                               </form>
@@ -327,7 +342,8 @@
                                 <button type="button" class="btn btn-warning">Bitir</button>
                               </form>
                               </div>
-                              <!--=====================-->  
+                              </div>
+                              <!--=====================-->
                           </div>
                         </div>
                       </div>
