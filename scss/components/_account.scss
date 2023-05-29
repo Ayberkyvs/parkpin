@@ -1,5 +1,6 @@
 .account-profile-mobile{
   display: none !important;
+  margin-left: 36px;
 }
 .account-profile{
   display: flex;
@@ -31,8 +32,11 @@
     width: 100%;
   }
   .profile{
-    width: 100% !important;
-    display: none !important;
+    width: auto !important;
+    display: flex !important;
+    left: 35px !important;
+    width: 30px !important;
+    height: 30px !important;
   }
   .account-profile-mobile{
     display: flex !important;

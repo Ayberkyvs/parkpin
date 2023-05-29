@@ -599,6 +599,7 @@ section {
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 .account-profile-mobile {
   display: none !important;
+  margin-left: 36px;
 }
 
 .account-profile {
@@ -633,8 +634,11 @@ section {
     width: 100%;
   }
   .profile {
-    width: 100% !important;
-    display: none !important;
+    width: auto !important;
+    display: flex !important;
+    left: 35px !important;
+    width: 30px !important;
+    height: 30px !important;
   }
   .account-profile-mobile {
     display: flex !important;
