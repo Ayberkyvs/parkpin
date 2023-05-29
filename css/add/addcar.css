@@ -1,174 +1,3 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-.account-profile-mobile {
-  display: none !important;
-}
-
-.account-profile {
-  display: flex;
-  position: relative;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 120px;
-  height: 60px;
-}
-.account-profile .profile {
-  position: absolute;
-  top: 0;
-  border-radius: 50%;
-  border: 1px solid black;
-  width: 60px;
-  height: 60px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.account-profile .profile img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-@media screen and (max-width: 799px) {
-  .account-profile {
-    width: 100%;
-  }
-  .profile {
-    width: 100% !important;
-    display: none !important;
-  }
-  .account-profile-mobile {
-    display: flex !important;
-  }
-}
-/* MENU AMK MENU ANASINI SİKTİĞİM MENYSY */
-.menu > li > a {
-  color: rgb(0, 0, 0);
-  font-family: "Inter", sans-serif;
-  font-weight: bold;
-}
-
-.header .mainLogo {
-  float: left;
-  display: block;
-}
-
-.menu {
-  position: relative;
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  overflow: hidden;
-  background-color: #FFDD63;
-}
-
-.menu a {
-  display: block;
-  padding: 20px;
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-}
-
-.menu a:hover {
-  background-color: #ccb04f;
-}
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-.header .menu-icon {
-  padding: 28px 20px;
-  position: relative;
-  float: right;
-  cursor: pointer;
-}
-
-.header .menu-icon .nav-icon {
-  background: black;
-  display: block;
-  height: 2px;
-  width: 18px;
-  position: relative;
-  transition: background 0.2s ease-out;
-}
-
-.header .menu-icon .nav-icon:before {
-  background: black;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: 5px;
-}
-
-.header .menu-icon .nav-icon:after {
-  background: black;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: -5px;
-}
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 240px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-@media (min-width: 800px) {
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-  .header {
-    display: flex;
-  }
-  #mainLogo {
-    margin-left: 70px;
-  }
-  .menu {
-    margin-right: 70px;
-  }
-}
-#map {
-  height: 100% !important;
-  width: 100% !important;
-  background-color: red;
-}
-
 #demo-div {
   display: flex;
   align-items: center;
@@ -197,13 +26,16 @@
 #demo-div > ul > li {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   text-align: center;
   list-style: none;
   height: 100%;
   margin: 1px;
   padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #demo-div > ul > li > h3 {
@@ -212,10 +44,30 @@
   font-family: "Inter", sans-serif;
 }
 
-#demo-div > ul > li > span {
-  font-size: 9px;
+.shineline {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #FFDD63, transparent);
+  filter: blur(10px);
+  animation: flowing-line 3s infinite;
 }
 
+@keyframes flowing-line {
+  0%, 100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 799px) {
   #demo-div > ul > li > h3 {
     font-size: 7px;
@@ -321,7 +173,7 @@
     margin-left: 3px;
   }
   #loader {
-    background-size: 400px;
+    background-size: 400px !important;
   }
 }
 .footer {
@@ -439,64 +291,24 @@
     background-positon-x: 0px;
   }
 }
-.main-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  position: relative;
-  top: 126px;
-  margin-bottom: 300px;
-}
-.main-container .map-container {
-  width: 100%;
-  height: 600px;
-  margin-bottom: 100px;
-}
-.main-container .col2 {
-  justify-content: center;
-  display: flex;
-  width: 100%;
-}
-.main-container .allparkinglots-container {
-  display: flex;
-  flex-direction: column !important;
-  justify-content: center;
-  width: 90%;
-  height: auto;
-  margin-bottom: 100px;
-}
-.main-container .allparkinglots-container h2 {
-  font-size: 25px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-}
-.main-container .allparkinglots-container .card img {
-  max-height: 350px;
-  height: 350px;
-  min-height: 350px;
-}
-.main-container .allparkinglots-container .card img:hover {
-  filter: blur(1px) grayscale(100);
-  border: 1px solid black;
-  transition: ease-in-out 0.3s;
-  cursor: pointer;
-}
-.main-container .allparkinglots-container .card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 @media screen and (max-width: 799px) {
-  .main-container {
-    top: 85px;
+  .social-icon {
+    padding: 0 !important;
   }
-  .map-container {
-    height: 500px !important;
+  .social-icon__link {
+    font-size: 25px !important;
+  }
+  .footer p {
+    font-size: 12px !important;
+  }
+  .footer-menu {
+    margin: 0px !important;
+    padding: 0 !important;
+  }
+  .menu__link {
+    font-size: 14px !important;
   }
 }
-/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 body {
   display: flex;
   flex-direction: column;
@@ -511,4 +323,109 @@ body {
 
 * {
   font-family: "Inter", sans-serif;
-}/*# sourceMappingURL=otoparklar.css.map */
+}
+
+.header {
+  height: 60px !important;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center !important;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.header a {
+  color: black;
+}
+.header a span {
+  font-size: 12px;
+}
+.header img {
+  padding: 0 !important;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  top: 75px;
+  margin-bottom: 300px;
+}
+.main-container .banner-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 600px;
+  min-height: 600px;
+  align-items: center;
+  justify-content: center;
+}
+.main-container .banner-container h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 15%;
+  letter-spacing: 10px;
+}
+.main-container .banner-container img {
+  width: auto;
+  height: auto;
+}
+
+.addcar-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.addcar-container form {
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#colorpicker {
+  display: flex !important;
+  flex-direction: row !important;
+}
+#colorpicker input {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 799px) {
+  .addcar-container form {
+    width: 80% !important;
+  }
+  .main-container {
+    top: 75px;
+  }
+  .banner-container {
+    width: 100%;
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+  .banner-container h2 {
+    font-size: 20px !important;
+    top: 20% !important;
+  }
+  .banner-container img {
+    width: 90% !important;
+  }
+}
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other *//*# sourceMappingURL=addcar.css.map */

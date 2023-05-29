@@ -2,6 +2,9 @@
 body{
     background-color: rgb(242, 242, 242) !important;
 }
+section{
+    width: 100%;
+}
 .main-container{
     display: flex;
     position: relative;
@@ -36,6 +39,9 @@ body{
                 color: blue;
             }
             a:focus{
+                color: blue;
+            }
+            a:active{
                 color: blue;
             }
             span{
@@ -79,6 +85,13 @@ body{
                     }
                 }
                 li:hover{
+                    background-color: #5954f219;
+                    color: $button-color;
+                    a{
+                        color: $button-color;
+                    }
+                }
+                li:active{
                     background-color: #5954f219;
                     color: $button-color;
                     a{
@@ -186,7 +199,7 @@ body{
                 }
             }
             .cars-info-container{
-                width: 100%;
+                width: 100% !important;
                 display: flex;
                 flex-direction: column;
                 height: auto;
@@ -241,7 +254,7 @@ body{
                             border: 1px solid black;
                             height: 100%;
                             background-color: rgba(211, 211, 211, 0.122);
-                            margin-bottom: 30px;
+                            margin-bottom: 10px;
                         }
                         textarea::placeholder{
                             font-size: 14px;
@@ -449,7 +462,10 @@ body{
                     }
                     a{
                         margin: 0 !important;
-                        display: none !important;
+                        display: flex !important;
+                    }
+                    span{
+                        display: none;
                     }
                 }
             }
@@ -555,6 +571,12 @@ body{
     }
     .container-fluid{
         width: 100% !important;
+        flex-direction: column;
+        justify-content: flex-start;
+        .card{
+            width: 100% !important;
+            max-width: 100% !important;
+        }
     }
 
     }

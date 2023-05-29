@@ -1,5 +1,312 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #dceffd;
+  font-family: 100% "Inter", sans-serif;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+/*MAIN BASLANGIC */
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 126px;
+  background-image: url("../../img/pages/home/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: 100%;
+}
+
+.main-container-left {
+  display: flex;
+  min-height: 100%;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: left;
+  flex-direction: row;
+}
+
+.main-container-left-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  margin-right: 15px;
+}
+
+.main-container-left-texts {
+  display: block;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+#main-container-left-texts-right {
+  font-size: 16px;
+}
+
+.searchbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  offset: 0px 4px;
+}
+
+#container-blank {
+  width: 100%;
+  height: 20%;
+}
+
+#searchbox-div {
+  display: flex;
+  width: 90%;
+  height: 30%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: left;
+}
+
+#searchbox-div > h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.form {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#selectCity {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: 100%;
+  width: 30%;
+}
+
+#selectService {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: 100%;
+  width: 30%;
+  margin-left: 2%;
+}
+
+label {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  height: 25px;
+  font-size: 14px;
+}
+
+select {
+  width: 100%;
+  height: 50px;
+  opacity: 0.6;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  color: black;
+}
+
+option {
+  font-family: "Inter", sans-serif;
+  color: black;
+  background-color: rgb(244, 244, 244);
+  padding: 5;
+  font-size: 14px;
+  font-size-adjust: 1;
+  padding: 10px;
+}
+
+#submitButton {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: flex-start;
+  width: 40%;
+  height: 100%;
+  padding-top: 26px;
+  margin-left: 5%;
+}
+
+#submitButton > button {
+  width: 100%;
+  height: 49px;
+  background-color: #5a54f2;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.main-container-right {
+  display: flex;
+  width: 50%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  flex-direction: column;
+}
+
+.main-container-right-in {
+  margin-right: -100px;
+  margin-top: 10px;
+}
+.main-container-right-in img {
+  transform: scale(0.9);
+}
+
+#blank-container {
+  position: relative;
+  width: 100%;
+  height: 850px;
+}
+
+#map-container {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  background-image: url("../../img/pages/home/revbg.png");
+  background-position: center;
+  background-size: cover;
+  background-position-y: 0%;
+  background-repeat: no-repeat;
+}
+
+.mapbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 500px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1400px) {
+  .main-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 600px;
+  }
+  .main-container-left {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    justify-content: center;
+  }
+  .main-container-left-in {
+    margin: 0px;
+    height: auto;
+    justify-content: flex-start;
+  }
+  .main-container-right {
+    display: none;
+    width: 100%;
+  }
+  .mapbox-container {
+    width: 90%;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 799px) {
+  .main-container {
+    top: 85px;
+    width: 100%;
+    background-position-y: 0px;
+    flex-direction: column;
+    height: 1000px;
+  }
+  .main-container-left {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+  }
+  .main-container-left-in {
+    margin-top: 50px;
+    height: 100%;
+  }
+  .main-container-right {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 90%;
+  }
+  .main-container-right-in {
+    height: 100%;
+    margin: 0px;
+  }
+  #main-container-left-texts-right {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .main-container-right-in > img {
+    width: 100%;
+    transform: scale(0.9);
+    height: auto;
+  }
+  .main-container-left-texts {
+    font-size: 25px;
+    text-align: left;
+  }
+  #main-container-left-texts-right {
+    text-align: justify;
+  }
+  #searchbox-div > h3 {
+    font-size: 15px;
+  }
+  #submitButton {
+    justify-content: center;
+  }
+  select {
+    font-size: 12px !important;
+  }
+}
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 .account-profile-mobile {
   display: none !important;
 }
@@ -7,6 +314,7 @@
 .account-profile {
   display: flex;
   position: relative;
+  flex-direction: column;
   justify-content: center !important;
   align-items: center !important;
   width: 120px;
@@ -14,13 +322,15 @@
 }
 .account-profile .profile {
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50%;
   border-radius: 50%;
   border: 1px solid black;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: translate(-50%, -50%);
 }
 .account-profile .profile img {
   width: 100%;
@@ -45,6 +355,7 @@
   color: rgb(0, 0, 0);
   font-family: "Inter", sans-serif;
   font-weight: bold;
+  font-size: 14px !important;
 }
 
 .header .mainLogo {
@@ -69,7 +380,7 @@
 }
 
 .menu a:hover {
-  background-color: #ccb04f;
+  background-color: #f5d45d;
 }
 
 .header .menu {
@@ -163,6 +474,12 @@
     margin-right: 70px;
   }
 }
+#map {
+  height: 100% !important;
+  width: 100% !important;
+  background-color: red;
+}
+
 #demo-div {
   display: flex;
   align-items: center;
@@ -191,13 +508,16 @@
 #demo-div > ul > li {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   text-align: center;
   list-style: none;
   height: 100%;
   margin: 1px;
   padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #demo-div > ul > li > h3 {
@@ -206,10 +526,30 @@
   font-family: "Inter", sans-serif;
 }
 
-#demo-div > ul > li > span {
-  font-size: 9px;
+.shineline {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #FFDD63, transparent);
+  filter: blur(10px);
+  animation: flowing-line 3s infinite;
 }
 
+@keyframes flowing-line {
+  0%, 100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 799px) {
   #demo-div > ul > li > h3 {
     font-size: 7px;
@@ -315,7 +655,7 @@
     margin-left: 3px;
   }
   #loader {
-    background-size: 400px;
+    background-size: 400px !important;
   }
 }
 .footer {
@@ -433,6 +773,24 @@
     background-positon-x: 0px;
   }
 }
+@media screen and (max-width: 799px) {
+  .social-icon {
+    padding: 0 !important;
+  }
+  .social-icon__link {
+    font-size: 25px !important;
+  }
+  .footer p {
+    font-size: 12px !important;
+  }
+  .footer-menu {
+    margin: 0px !important;
+    padding: 0 !important;
+  }
+  .menu__link {
+    font-size: 14px !important;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -447,138 +805,4 @@ body {
 
 * {
   font-family: "Inter", sans-serif;
-}
-
-.header {
-  height: 60px !important;
-  margin-bottom: 50px;
-  display: flex;
-  align-items: center !important;
-  justify-content: flex-start;
-  flex-direction: row;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-.header a {
-  color: #1877f2;
-}
-.header a span {
-  font-size: 12px;
-}
-.header img {
-  padding: 0 !important;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.main-container {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
-  top: 75px;
-  margin-bottom: 300px;
-}
-.main-container .banner-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 600px;
-  min-height: 600px;
-  align-items: center;
-  justify-content: center;
-}
-.main-container .banner-container img {
-  width: auto;
-  height: auto;
-  transition: ease-in-out 2s;
-}
-.main-container .banner-container img:hover {
-  transform: scale(0.8);
-}
-
-/*****************HIDDEN**********************/
-.hidden {
-  transition: ease-in-out 0.5s !important;
-  display: none !important;
-}
-
-/*        
-*/
-.col-sm-10 .input-group input::-moz-placeholder {
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
-  text-transform: uppercase;
-}
-.col-sm-10 .input-group input::placeholder {
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
-  text-transform: uppercase;
-}
-
-.addcar-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-}
-.addcar-container form {
-  width: 50%;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 20px;
-}
-.addcar-container form h2 {
-  font-size: 25px;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-  margin-bottom: 50px;
-}
-
-.mobile-text {
-  display: none !important;
-}
-
-.input-group-text {
-  font-size: 14px !important;
-}
-
-.btn-delete {
-  display: flex !important;
-}
-
-@media screen and (max-width: 799px) {
-  .addcar-container form {
-    width: 90% !important;
-  }
-  .main-container {
-    top: 75px;
-  }
-  .banner-container {
-    width: 100%;
-    height: auto !important;
-    min-height: 300px !important;
-    padding: 30px;
-  }
-  .banner-container img {
-    width: 100% !important;
-    height: 100% !important;
-  }
-  .input-group-text {
-    display: none !important;
-  }
-  .mobile-text {
-    display: flex !important;
-    font-size: 14px !important;
-  }
-}
-/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other *//*# sourceMappingURL=addparkinglots.css.map */
+}/*# sourceMappingURL=home.css.map */

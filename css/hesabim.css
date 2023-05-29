@@ -1,7 +1,10 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 body {
   background-color: rgb(242, 242, 242) !important;
+}
+
+section {
+  width: 100%;
 }
 
 .main-container {
@@ -41,6 +44,9 @@ body {
   color: blue;
 }
 .main-container .sidebar .sidebar-col1 a:focus {
+  color: blue;
+}
+.main-container .sidebar .sidebar-col1 a:active {
   color: blue;
 }
 .main-container .sidebar .sidebar-col1 span {
@@ -89,6 +95,13 @@ body {
   color: #5A54F2;
 }
 .main-container .sidebar .sidebar-col2 .sidebar-menu li:hover a {
+  color: #5A54F2;
+}
+.main-container .sidebar .sidebar-col2 .sidebar-menu li:active {
+  background-color: rgba(89, 84, 242, 0.0980392157);
+  color: #5A54F2;
+}
+.main-container .sidebar .sidebar-col2 .sidebar-menu li:active a {
   color: #5A54F2;
 }
 .main-container .account-container {
@@ -195,7 +208,7 @@ body {
   margin-right: 50px;
 }
 .main-container .account-container .account-inner-container .cars-info-container {
-  width: 100%;
+  width: 100% !important;
   display: flex;
   flex-direction: column;
   height: auto;
@@ -258,7 +271,7 @@ body {
   border: 1px solid black;
   height: 100%;
   background-color: rgba(211, 211, 211, 0.122);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .main-container .account-container .account-inner-container .cars-info-container .car-info .carinfoContainer textarea::-moz-placeholder {
   font-size: 14px;
@@ -475,7 +488,10 @@ body {
   }
   .sidebar .sidebar-col2 .sidebar-menu li a {
     margin: 0 !important;
-    display: none !important;
+    display: flex !important;
+  }
+  .sidebar .sidebar-col2 .sidebar-menu li span {
+    display: none;
   }
   .account-container {
     width: 100% !important;
@@ -572,6 +588,12 @@ body {
   }
   .container-fluid {
     width: 100% !important;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .container-fluid .card {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -582,6 +604,7 @@ body {
 .account-profile {
   display: flex;
   position: relative;
+  flex-direction: column;
   justify-content: center !important;
   align-items: center !important;
   width: 120px;
@@ -589,13 +612,15 @@ body {
 }
 .account-profile .profile {
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50%;
   border-radius: 50%;
   border: 1px solid black;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: translate(-50%, -50%);
 }
 .account-profile .profile img {
   width: 100%;
@@ -620,6 +645,7 @@ body {
   color: rgb(0, 0, 0);
   font-family: "Inter", sans-serif;
   font-weight: bold;
+  font-size: 14px !important;
 }
 
 .header .mainLogo {
@@ -644,7 +670,7 @@ body {
 }
 
 .menu a:hover {
-  background-color: #ccb04f;
+  background-color: #f5d45d;
 }
 
 .header .menu {
@@ -851,13 +877,16 @@ hr {
 #demo-div > ul > li {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   text-align: center;
   list-style: none;
   height: 100%;
   margin: 1px;
   padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #demo-div > ul > li > h3 {
@@ -866,10 +895,30 @@ hr {
   font-family: "Inter", sans-serif;
 }
 
-#demo-div > ul > li > span {
-  font-size: 9px;
+.shineline {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #FFDD63, transparent);
+  filter: blur(10px);
+  animation: flowing-line 3s infinite;
 }
 
+@keyframes flowing-line {
+  0%, 100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 799px) {
   #demo-div > ul > li > h3 {
     font-size: 7px;
@@ -975,7 +1024,7 @@ hr {
     margin-left: 3px;
   }
   #loader {
-    background-size: 400px;
+    background-size: 400px !important;
   }
 }
 .footer {
@@ -1091,6 +1140,24 @@ hr {
   }
   100% {
     background-positon-x: 0px;
+  }
+}
+@media screen and (max-width: 799px) {
+  .social-icon {
+    padding: 0 !important;
+  }
+  .social-icon__link {
+    font-size: 25px !important;
+  }
+  .footer p {
+    font-size: 12px !important;
+  }
+  .footer-menu {
+    margin: 0px !important;
+    padding: 0 !important;
+  }
+  .menu__link {
+    font-size: 14px !important;
   }
 }
 body {

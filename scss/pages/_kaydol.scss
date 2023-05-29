@@ -266,10 +266,10 @@
             }
         }
     }
-    @media screen and (max-width: 1400px) {
+    @media screen and (max-width: $tablet) {
         
     }
-    @media screen and (max-width: 799px) {
+    @media screen and (max-width: $phone) {
         .mainContainer{
             flex-direction: column;
             width: 100%;
@@ -355,13 +355,36 @@
                 }
                 .checkboxlabelClass{
                     font-family: $font-stack;
-                    font-size: 14px;
+                    font-size: 14px !important;
                     width: 90% !important; 
                 }
 
             }
         }
+        form{
+            label{
+                font-size: 14px !important;
+            }
+            input::placeholder{
+                font-size: 12px !important;
+            }
+            .inputClass{
+                font-size: 12px; 
+            }
+        }
+        .signupContainer{
+            width: 100% !important;
+            .signupContainer-in{
+                width: 80% !important;
+            }
+        }
+        .submitbuttonContainer{
+            input{
+                font-size: 14px !important;
+                width: 100px !important;
+            }
+        }
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: $sphone) {
 
     }/*# sourceMappingURL=giris-yap.css.map */

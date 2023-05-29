@@ -242,13 +242,45 @@ body {
     width: 60px !important;
     height: 60px !important;
   }
-}
-@media screen and (max-width: 600px) {
+  .loginBoxContainer form label {
+    font-size: 14px !important;
+  }
+  .loginBoxContainer form input {
+    height: 40px !important;
+  }
+  .loginBoxContainer form input::-moz-placeholder {
+    font-size: 14px !important;
+  }
+  .loginBoxContainer form input::placeholder {
+    font-size: 14px !important;
+  }
+  .loginBoxContainer form .submitButton {
+    font-size: 14px !important;
+    padding: 0px !important;
+    height: 40px !important;
+  }
   .textboxHelp {
     flex-direction: column !important;
   }
+  .textboxHelp h6 {
+    font-size: 14px;
+  }
+  .textboxHelp h6 a {
+    font-size: 14px !important;
+  }
+  .line-container h6 {
+    font-size: 14px !important;
+  }
   .line {
     width: 39% !important;
+    height: 3px !important;
+  }
+  .loginWithContainer-in {
+    width: 90% !important;
+  }
+  .loginWithContainer-in .loginWithButtons {
+    height: 50px !important;
+    width: 50px !important;
   }
 }
 .account-profile-mobile {
@@ -258,6 +290,7 @@ body {
 .account-profile {
   display: flex;
   position: relative;
+  flex-direction: column;
   justify-content: center !important;
   align-items: center !important;
   width: 120px;
@@ -265,13 +298,15 @@ body {
 }
 .account-profile .profile {
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50%;
   border-radius: 50%;
   border: 1px solid black;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: translate(-50%, -50%);
 }
 .account-profile .profile img {
   width: 100%;
@@ -296,6 +331,7 @@ body {
   color: rgb(0, 0, 0);
   font-family: "Inter", sans-serif;
   font-weight: bold;
+  font-size: 14px !important;
 }
 
 .header .mainLogo {
@@ -320,7 +356,7 @@ body {
 }
 
 .menu a:hover {
-  background-color: #ccb04f;
+  background-color: #f5d45d;
 }
 
 .header .menu {
@@ -442,13 +478,16 @@ body {
 #demo-div > ul > li {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   text-align: center;
   list-style: none;
   height: 100%;
   margin: 1px;
   padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #demo-div > ul > li > h3 {
@@ -457,10 +496,30 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-#demo-div > ul > li > span {
-  font-size: 9px;
+.shineline {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #FFDD63, transparent);
+  filter: blur(10px);
+  animation: flowing-line 3s infinite;
 }
 
+@keyframes flowing-line {
+  0%, 100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 799px) {
   #demo-div > ul > li > h3 {
     font-size: 7px;
@@ -566,7 +625,7 @@ body {
     margin-left: 3px;
   }
   #loader {
-    background-size: 400px;
+    background-size: 400px !important;
   }
 }
 body {

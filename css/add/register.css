@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 #demo-div {
   display: flex;
   align-items: center;
@@ -27,13 +26,16 @@
 #demo-div > ul > li {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   text-align: center;
   list-style: none;
   height: 100%;
   margin: 1px;
   padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #demo-div > ul > li > h3 {
@@ -42,10 +44,30 @@
   font-family: "Inter", sans-serif;
 }
 
-#demo-div > ul > li > span {
-  font-size: 9px;
+.shineline {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #FFDD63, transparent);
+  filter: blur(10px);
+  animation: flowing-line 3s infinite;
 }
 
+@keyframes flowing-line {
+  0%, 100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 799px) {
   #demo-div > ul > li > h3 {
     font-size: 7px;
@@ -151,7 +173,7 @@
     margin-left: 3px;
   }
   #loader {
-    background-size: 400px;
+    background-size: 400px !important;
   }
 }
 .footer {
@@ -269,6 +291,24 @@
     background-positon-x: 0px;
   }
 }
+@media screen and (max-width: 799px) {
+  .social-icon {
+    padding: 0 !important;
+  }
+  .social-icon__link {
+    font-size: 25px !important;
+  }
+  .footer p {
+    font-size: 12px !important;
+  }
+  .footer-menu {
+    margin: 0px !important;
+    padding: 0 !important;
+  }
+  .menu__link {
+    font-size: 14px !important;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -304,6 +344,8 @@ body {
   background-size: 80%;
   display: flex;
   flex-direction: column;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.9);
+  z-index: 1;
 }
 .mainContainer .brandContainer .brand {
   display: flex;

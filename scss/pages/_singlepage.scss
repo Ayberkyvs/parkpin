@@ -6,12 +6,12 @@ $discord-grisi : #2C2F33;
     height: auto;
 }
 .carousel-item{
-    max-height: 600px !important;
-    height: 600px;
+    max-height: 700px !important;
+    height: 700px;
     img{
         max-height: 100% !important;
-        height: 600px !important;
-        min-height: 600px !important;
+        height: 700px !important;
+        min-height: 700px !important;
     }
 }
 .container-fluid{
@@ -28,10 +28,10 @@ $discord-grisi : #2C2F33;
         height: auto;
         display: flex;
         flex-direction: column;
-        background-color: white;
-
+        background-color: $primary-color;
         z-index: 0;
         padding: 20px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
         .col-md-4{
             min-height: 100%;
             img{
@@ -40,16 +40,16 @@ $discord-grisi : #2C2F33;
         }
     }
     .card{
-        background-color: $discord-grisi;
-        color: white !important;
-        border: 1px solid white;
+        background-color: rgb(241, 241, 241);
+        color: black !important;
+        border: 1px solid black;
         box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
         .card-text{
             font-family: $font-stack !important;
-            color: white !important;
+            color: black !important;
             small{
                 font-family: $font-stack !important;
-                color: white !important;
+                color: black !important;
             }
         }
     }
@@ -57,11 +57,11 @@ $discord-grisi : #2C2F33;
         color: orange !important;
     }
     .mainbar{
-        width: 100%;
+        width: 100% !important;
         height: auto;
         display: flex;
         flex-direction: column;
-        padding: 50px;
+        padding: 20px;
         .slot-container{
             width: 100%;
             height: auto;

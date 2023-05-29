@@ -366,8 +366,30 @@ body {
   }
   .checkboxContainer div .checkboxlabelClass {
     font-family: "Inter", sans-serif;
-    font-size: 14px;
+    font-size: 14px !important;
     width: 90% !important;
+  }
+  form label {
+    font-size: 14px !important;
+  }
+  form input::-moz-placeholder {
+    font-size: 12px !important;
+  }
+  form input::placeholder {
+    font-size: 12px !important;
+  }
+  form .inputClass {
+    font-size: 12px;
+  }
+  .signupContainer {
+    width: 100% !important;
+  }
+  .signupContainer .signupContainer-in {
+    width: 80% !important;
+  }
+  .submitbuttonContainer input {
+    font-size: 14px !important;
+    width: 100px !important;
   }
 }
 
@@ -399,13 +421,16 @@ body {
 #demo-div > ul > li {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   text-align: center;
   list-style: none;
   height: 100%;
   margin: 1px;
   padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #demo-div > ul > li > h3 {
@@ -414,10 +439,30 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-#demo-div > ul > li > span {
-  font-size: 9px;
+.shineline {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #FFDD63, transparent);
+  filter: blur(10px);
+  animation: flowing-line 3s infinite;
 }
 
+@keyframes flowing-line {
+  0%, 100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 799px) {
   #demo-div > ul > li > h3 {
     font-size: 7px;
@@ -523,6 +568,6 @@ body {
     margin-left: 3px;
   }
   #loader {
-    background-size: 400px;
+    background-size: 400px !important;
   }
 }/*# sourceMappingURL=kaydol.css.map */

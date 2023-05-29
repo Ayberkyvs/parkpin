@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 .account-profile-mobile {
   display: none !important;
 }
@@ -7,6 +6,7 @@
 .account-profile {
   display: flex;
   position: relative;
+  flex-direction: column;
   justify-content: center !important;
   align-items: center !important;
   width: 120px;
@@ -14,13 +14,15 @@
 }
 .account-profile .profile {
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50%;
   border-radius: 50%;
   border: 1px solid black;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: translate(-50%, -50%);
 }
 .account-profile .profile img {
   width: 100%;
@@ -45,6 +47,7 @@
   color: rgb(0, 0, 0);
   font-family: "Inter", sans-serif;
   font-weight: bold;
+  font-size: 14px !important;
 }
 
 .header .mainLogo {
@@ -69,7 +72,7 @@
 }
 
 .menu a:hover {
-  background-color: #ccb04f;
+  background-color: #f5d45d;
 }
 
 .header .menu {
@@ -245,13 +248,16 @@ label[for]:hover {
 #demo-div > ul > li {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   text-align: center;
   list-style: none;
   height: 100%;
   margin: 1px;
   padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #demo-div > ul > li > h3 {
@@ -260,10 +266,30 @@ label[for]:hover {
   font-family: "Inter", sans-serif;
 }
 
-#demo-div > ul > li > span {
-  font-size: 9px;
+.shineline {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #FFDD63, transparent);
+  filter: blur(10px);
+  animation: flowing-line 3s infinite;
 }
 
+@keyframes flowing-line {
+  0%, 100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 799px) {
   #demo-div > ul > li > h3 {
     font-size: 7px;
@@ -369,7 +395,7 @@ label[for]:hover {
     margin-left: 3px;
   }
   #loader {
-    background-size: 400px;
+    background-size: 400px !important;
   }
 }
 .footer {
@@ -487,6 +513,24 @@ label[for]:hover {
     background-positon-x: 0px;
   }
 }
+@media screen and (max-width: 799px) {
+  .social-icon {
+    padding: 0 !important;
+  }
+  .social-icon__link {
+    font-size: 25px !important;
+  }
+  .footer p {
+    font-size: 12px !important;
+  }
+  .footer-menu {
+    margin: 0px !important;
+    padding: 0 !important;
+  }
+  .menu__link {
+    font-size: 14px !important;
+  }
+}
 .main-container {
   position: relative;
   top: 126px;
@@ -495,13 +539,13 @@ label[for]:hover {
 }
 
 .carousel-item {
-  max-height: 600px !important;
-  height: 600px;
+  max-height: 700px !important;
+  height: 700px;
 }
 .carousel-item img {
   max-height: 100% !important;
-  height: 600px !important;
-  min-height: 600px !important;
+  height: 700px !important;
+  min-height: 700px !important;
 }
 
 .container-fluid {
@@ -519,9 +563,10 @@ label[for]:hover {
   height: auto;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #FFDD63;
   z-index: 0;
   padding: 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
 }
 .container-fluid .sidebar .col-md-4 {
   min-height: 100%;
@@ -530,28 +575,28 @@ label[for]:hover {
   min-height: 100%;
 }
 .container-fluid .card {
-  background-color: #2C2F33;
-  color: white !important;
-  border: 1px solid white;
+  background-color: rgb(241, 241, 241);
+  color: black !important;
+  border: 1px solid black;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
 }
 .container-fluid .card .card-text {
   font-family: "Inter", sans-serif !important;
-  color: white !important;
+  color: black !important;
 }
 .container-fluid .card .card-text small {
   font-family: "Inter", sans-serif !important;
-  color: white !important;
+  color: black !important;
 }
 .container-fluid .checked {
   color: orange !important;
 }
 .container-fluid .mainbar {
-  width: 100%;
+  width: 100% !important;
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 20px;
 }
 .container-fluid .mainbar .slot-container {
   width: 100%;
