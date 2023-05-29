@@ -136,7 +136,7 @@ body{
             .personal-info-container{
                 display: flex;
                 flex-direction: column;
-                width: 100%;
+                width: 100% !important;
                 margin-bottom: 100px;
                 height: auto;
                 h2{
@@ -408,10 +408,6 @@ body{
     }
 }
 @media screen and (max-width: 1400px) {
-
-    }
-
-@media screen and (max-width: 799px) {
     .main-container{
         flex-direction: column;
     }
@@ -430,15 +426,31 @@ body{
             width: 100% !important;
             .sidebar-menu{
                 flex-direction: row !important;
-                margin: 0px !important;
-                margin-left: -30px !important;
                 width: 100% !important;
-                justify-content: center !important;
+                justify-content: space-between !important;
+                padding: 0px !important;
+                :first-child{
+                    border: 0px;
+                }
                 li{
-                    width: auto !important;
+                    margin: 0px !important;
+                    width: 25% !important;
                     text-align: center;
                     font-size: 14px;
-                    margin: 0 !important;
+                    display: flex;
+                    padding: 0 !important;
+                    justify-content: center;
+                    align-items: center;
+                    box-sizing: border-box;
+                    border-left: 1px solid black;
+                    i{
+                        margin: 0px !important;
+                        font-size: 16px;
+                    }
+                    a{
+                        margin: 0 !important;
+                        display: none !important;
+                    }
                 }
             }
         }
@@ -446,7 +458,19 @@ body{
     .account-container{
         width: 100% !important;
         .account-inner-container{
+            overflow: hidden;
             width: 100% !important;
+            padding: 15px !important;
+            margin: 0px !important;
+            .account{
+                .account-avatar{
+                    width: 150px !important;
+                    height: 150px !important;
+                }
+                h3{
+                    font-size: 20px !important;
+                }
+            }
         }
         .personal-info-container{
             flex-direction: column !important;
@@ -465,6 +489,7 @@ body{
                     div{
                         flex-direction: column !important;
                         margin-bottom: 20px;
+                        width: 100%;
                     }
                 }
             }
@@ -513,9 +538,29 @@ body{
             }
         }
         .manage-car{
+            flex-direction: row !important;
+            display: flex;
+            width: 100% !important;
             margin-bottom: 20px;
+            button{
+                margin-top: 0px !important;
+                margin-right: 10px;
+                width: 70px !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+            }
         }
     }
+    .container-fluid{
+        width: 100% !important;
+    }
+
+    }
+
+@media screen and (max-width: 799px) {
+
     }
   
   /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
