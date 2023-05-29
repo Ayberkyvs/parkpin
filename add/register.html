@@ -9,7 +9,7 @@
   <meta name="author" content="Ayberk Yavaş">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rezervasyon Yap | Parkpin</title>
-  <link rel="stylesheet" href="../scss/register.css" />
+  <link rel="stylesheet" href="../css/add/register.css" />
   <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.png">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <!--<link rel="stylesheet" href="../css/main.css"/> -->
@@ -62,8 +62,7 @@
         </div>
       </div>
       <div class="form-container">
-        <form action="/parkingLots/<%= parkingLot._id %>/reservation" method="POST" class="validated-form"
-          id="reserve-form">
+        <form action="ibne-php">
           <h2>Rezervasyon yap</h2>
           <h5>Bilgileri eksiksiz doldurduktan sonra rezervasyon tamamlanacaktır.</h5>
           <br>
@@ -78,37 +77,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Slot seçiniz.</label>
-            <div class="parking-slot">
-              <div class="slot-table">
-                <div class="slot-map mb-3">
-                  <div class="slots-display">
-                    <button class="slot-button available" type="button" data-slot-id="1">1
-                    </button>
-                    <button class="slot-button available" type="button" data-slot-id="2">2
-                    </button>
-                    <button class="slot-button available" type="button" data-slot-id="3">3
-                    </button>
-                    <button class="slot-button available" type="button" data-slot-id="4">4
-                    </button>
-                  </div>
-
-                  <div class="floor-display">
-                    <button class="floor-button" type="button" data-floor-id="1">
-                      1
-                    </button>
-                    <button class="floor-button" type="button" data-floor-id="2">
-                      2
-                    </button>
-                    <button class="floor-button" type="button" data-floor-id="3">
-                      3
-                    </button>
-                    <button class="floor-button" type="button" data-floor-id="4">
-                      4
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="parking-slot"></div>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Park Planını Seçiniz</label>
@@ -130,7 +99,6 @@
     </div>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
-  <script src="../js/floorSlotButtons.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/kaydol.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
