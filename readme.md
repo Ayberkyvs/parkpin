@@ -1,24 +1,20 @@
-Merhaba Parkpin Frontend Kodlarına Hoşgeldiniz!
+╔═══╦═══╦═══╦╗╔═╦═══╦══╦═╗─╔╗
+║╔═╗║╔═╗║╔═╗║║║╔╣╔═╗╠╣╠╣║╚╗║║
+║╚═╝║║─║║╚═╝║╚╝╝║╚═╝║║║║╔╗╚╝║
+║╔══╣╚═╝║╔╗╔╣╔╗║║╔══╝║║║║╚╗║║
+║║──║╔═╗║║║╚╣║║╚╣║──╔╣╠╣║─║║║
+╚╝──╚╝─╚╩╝╚═╩╝╚═╩╝──╚══╩╝─╚═╝
+Live: parkpin.netlify.app
 
-Site SASS ile yazılmıştır. Lütfen editlerken scss uzantılı dosyalar üzerinden css yazıp Watch Sass Eklentisi ile CSS'e çevirin. (Öneri)
+Çetin Tekin - Backend
 
-Kaynak Kodlarının izinsiz kullanımı yasaktır. Eğitim amaçlı ve çıkar elde etmeden kullanmak serbesttir.
+Github: https://github.com/LoyalEnv0y?tab=repositories
+Linkedin: https://www.linkedin.com/in/%C3%A7etin-tekin-loyalenv0y/
+email: cetin200012@gmail.com
 
-Parkpin - V1.2 Early Access
+Ayberk Yavaş - Frontend
 
----
-
-Sitelerim
-
-www.ayberkyavas.com
-www.ayberkyavas.com.tr
-
----
-
-Yaptığım Diğer Siteler
-
-www.gameathon.ieu.edu.tr
-www.serapore.com.tr
-www.turizmkaradagli.com
-www.albuz.com.tr
-www.ayberkyavas.site
+Github: https://github.com/Ayberkyvs
+Linkedin: https://www.linkedin.com/in/ayberksch/
+E-mail: ayberkyavas9@gmail.com
+Website: https://www.ayberkyavas.com
